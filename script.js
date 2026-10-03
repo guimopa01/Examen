@@ -1,995 +1,436 @@
 const preguntas = [
   {
-    pregunta: "1. ¿Qué es Git?",
+    pregunta: "1. ¿Qué es la computación en la nube?",
     respuestas: [
-      "Un editor de texto para programadores",
-      "Un sistema de control de versiones para gestionar cambios en proyectos",
-      "Una nube para guardar archivos",
-      "Un lenguaje de programación"
+      "La instalación física de servidores dentro de las oficinas de una empresa",
+      "La distribución de servicios informáticos a través de internet",
+      "Un modelo donde el usuario debe comprar licencias y hardware permanentemente antes de usarlos",
+      "Un sistema de almacenamiento exclusivo en discos duros locales sin conexión a red"
     ],
     correcta: 1
   },
   {
-    pregunta: "2. ¿Qué es GitHub?",
+    pregunta: "2. ¿Qué permite la computación en la nube?",
     respuestas: [
-      "Un programa para hacer commits",
-      "Una plataforma online para alojar repositorios Git y colaborar",
-      "Un comando para sincronizar ramas",
-      "Un sistema operativo para desarrolladores"
+      "Acceder a los recursos de manera remota, bajo demanda y pagando solo por lo que se utiliza",
+      "Obligar a las empresas a gestionar el mantenimiento físico de sus propios servidores",
+      "Eliminar completamente la necesidad de conexión a internet para trabajar",
+      "Comprar hardware propio a un precio único e invariable"
     ],
-    correcta: 1
+    correcta: 0
   },
   {
-    pregunta: "3. Creas una carpeta nueva, ejecutas git init y luego miras dentro. ¿Qué deberías ver?(GIT)",
+    pregunta: "3. ¿Qué característica no pertenece al modelo tradicional (on-premise)?",
     respuestas: [
-      "Un archivo llamado commits.txt",
-      "Una carpeta oculta .git/",
-      "Un archivo README generado automáticamente",
-      "Nada nuevo"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "4. Tienes un archivo nuevo que nunca has añadido. Al hacer git status, ¿cómo aparecerá?(GIT)",
-    respuestas: [
-      "Como staged",
-      "Como committed",
-      "Como untracked",
-      "Como merged"
+      "Costes iniciales elevados en la compra de hardware y licencias",
+      "Instalación y configuración de servidores a cargo de la empresa",
+      "Eliminación del mantenimiento físico del hardware",
+      "Control directo sobre los datos y la infraestructura"
     ],
     correcta: 2
   },
   {
-    pregunta: "5. Tienes un archivo modificado pero NO lo has añadido. ¿Qué mostrará git status?(GIT)",
+    pregunta: "4. ¿Qué es el modelo on-premise?",
     respuestas: [
-      "Que está en staging",
-      "Que está modified",
-      "Que está eliminado",
-      "Que está en conflicto"
+      "Un modelo de alquiler de software a través de navegadores web sin instalación previa",
+      "Un modelo donde la empresa compra, instala y gestiona la infraestructura dentro de sus propias instalaciones",
+      "Un servicio de infraestructura pública compartido entre múltiples empresas en internet",
+      "Una arquitectura basada exclusivamente en la ejecución de código sin servidores"
     ],
     correcta: 1
   },
   {
-    pregunta: "6. Guardas cambios en un archivo y ejecutas git diff. ¿Qué deberías ver?(GIT)",
+    pregunta: "5. ¿Qué característica no pertenece al modelo de nube?",
     respuestas: [
-      "Un mensaje de error",
-      "Un resumen sin detalles",
-      "Un listado de líneas añadidas y eliminadas",
-      "Solo los nombres de los archivos"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "7. Si haces git add a un archivo y luego git status, ¿en qué estado aparecerá?(GIT)",
-    respuestas: [
-      "Untracked",
-      "Modified",
-      "Staged",
-      "Deleted"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "8. Haces git commit sin haber añadido nada antes. ¿Qué ocurre?(GIT)",
-    respuestas: [
-      "Se guarda todo el proyecto",
-      "Se guardan solo los archivos modificados",
-      "No se guarda nada porque no hay nada en staging",
-      "Se borra el historial"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "9. Ejecutas git log en tu repositorio. ¿Qué información deberías ver en pantalla?(GIT)",
-    respuestas: [
-      "Una lista detallada con cada commit, su autor, fecha y mensaje",
-      "Solo el último commit realizado",
-      "Un gráfico visual de las ramas del proyecto",
-      "Un archivo temporal generado automáticamente"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "10. Modificas un archivo y quieres deshacer esos cambios sin borrar el archivo con git restore. ¿Qué pasará?(GIT)",
-    respuestas: [
-      "El archivo se borra",
-      "El archivo vuelve al estado del último commit",
-      "El archivo se mueve a staging",
-      "El archivo se convierte en untracked"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "11. Añadiste un archivo a staging por error. Lo quieres sacar sin perder los cambios (git restore). ¿Qué ocurrirá?(GIT)",
-    respuestas: [
-      "Se borran los cambios",
-      "El archivo vuelve a modified",
-      "El archivo se convierte en untracked",
-      "El archivo se borra del proyecto"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "12. Creas una rama nueva y luego haces git branch. ¿Qué verás?(GIT)",
-    respuestas: [
-      "Solo la rama nueva",
-      "Todas las ramas locales y un asterisco en la actual",
-      "Solo la rama main",
-      "Un error porque no hay commits"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "13. Estás en la rama main y te mueves a otra rama con git checkout / switch. ¿Qué debería pasar en tu proyecto?(GIT)",
-    respuestas: [
-      "Se borran archivos",
-      "Cambian los archivos para coincidir con esa rama",
-      "Se mezclan ambas ramas automáticamente",
-      "No cambia nada"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "14. Creas una rama nueva y automáticamente quedas dentro de ella (git checkout -b). ¿Qué ha ocurrido?(GIT)",
-    respuestas: [
-      "Has creado una rama vacía sin moverte",
-      "Has creado una rama y te has movido a ella",
-      "Has eliminado la rama anterior",
-      "Has hecho un merge sin querer"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "15. Estás en la rama main y decides fusionar otra rama llamada 'login' (git merge login). ¿Qué resultado esperas?(GIT)",
-    respuestas: [
-      "Se borran los cambios de 'login'",
-      "Los cambios de 'login' se integran en main",
-      "Se crea una rama nueva",
-      "Se reinicia el historial"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "16. Intentas borrar una rama que aún tiene cambios no integrados (git branch -d). ¿Qué suele pasar?(GIT)",
-    respuestas: [
-      "Se borra sin avisar",
-      "Git te bloquea y te avisa del riesgo",
-      "Se hace merge automáticamente",
-      "Se borra el historial completo"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "17. Quieres ver un árbol visual con todas las ramas y commits (git log --graph --oneline --all). ¿Qué deberías ver?(GIT)",
-    respuestas: [
-      "Un gráfico con líneas que representan ramas",
-      "Solo la rama actual",
-      "Un gráfico incorrecto",
-      "Un mensaje de error"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "18. Tienes un repositorio local y quieres vincularlo con uno remoto (git remote add origin). ¿Qué ocurre después de hacerlo?(GIT)",
-    respuestas: [
-      "Se suben automáticamente todos los commits",
-      "Tu repositorio local queda conectado a una URL remota",
-      "Se borra tu carpeta local",
-      "Se crea una rama nueva"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "19. Quieres comprobar a qué direcciones remotas apunta tu proyecto (git remote -v). ¿Qué deberías ver?(GIT)",
-    respuestas: [
-      "Solo la rama main",
-      "Una lista de URLs remotas configuradas",
-      "Un archivo de configuración",
-      "Un mensaje de error"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "20. Subes una rama por primera vez al remoto (git push -u origin). ¿Qué efecto tiene?(GIT)",
-    respuestas: [
-      "Se crea la rama en GitHub y queda vinculada para futuros pushes",
-      "Se borra la rama local",
-      "Se hace merge automático",
-      "Se reinicia el historial"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "21. Ya tienes una rama vinculada y haces push. ¿Qué ocurre?(GIT)",
-    respuestas: [
-      "Se suben tus commits nuevos",
-      "Se borra la rama remota",
-      "Se crea un fork",
-      "Se hace un pull automático"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "22. Descargas un repositorio existente desde GitHub mediante git clone. ¿Qué obtienes?(GIT)",
-    respuestas: [
-      "Solo la carpeta .git",
-      "El proyecto entero en una carpeta nueva",
-      "Solo la rama main",
-      "Un archivo ZIP vacío"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "23. Ejecutas git fetch para comprobar si hay cambios nuevos en el remoto sin modificar tu código local. ¿Qué ocurre?(GIT)",
-    respuestas: [
-      "Se mezclan los cambios automáticamente",
-      "Se descargan commits en la sombra sin modificar tu trabajo",
-      "Se borra tu rama actual",
-      "Se crea una rama nueva"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "24. Traes los cambios de tus compañeros y se integran en tu proyecto. ¿Qué pasa?(GIT)",
-    respuestas: [
-      "Se borran tus commits",
-      "Se mezclan los cambios (fast-forward o merge)",
-      "Se crea un fork",
-      "Se reinicia el repositorio"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "25. Quieres eliminar una rama remota para siempre (git push origin --delete). ¿Qué resultado esperas?(GIT)",
-    respuestas: [
-      "La rama desaparece del remoto",
-      "La rama se convierte en privada",
-      "La rama se mueve a staging",
-      "La rama se fusiona automáticamente"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "26. Haces un Fork de un proyecto. ¿Qué obtienes?(GIT)",
-    respuestas: [
-      "Una copia completa del proyecto bajo tu cuenta",
-      "Permisos para editar el proyecto original",
-      "Un archivo ZIP",
-      "Una rama nueva en el proyecto original"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "27. Creas un Pull Request. ¿Qué significa?(GIT)",
-    respuestas: [
-      "Estás pidiendo permiso para borrar una rama",
-      "Estás solicitando que tus cambios se revisen e integren",
-      "Estás creando un fork",
-      "Estás haciendo un merge automático"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "28. Tu fork está desactualizado respecto al proyecto original. Usas Sync Fork. ¿Qué ocurre?(GIT)",
-    respuestas: [
-      "Se borran tus commits",
-      "Tu fork se actualiza con los cambios del proyecto principal",
-      "Se crea un PR automático",
-      "Se reinicia tu repositorio"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "29. Estás haciendo un merge y Git consigue combinar automáticamente los cambios en un archivo sin conflicto. ¿Cómo quedará ese archivo?(GIT)",
-    respuestas: [
-      "Se marca como deleted y se borra",
-      "Se marca como untracked",
-      "Se considera merged correctamente y forma parte del nuevo commit",
-      "Se queda fuera del merge y no cambia"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "30. Intentas fusionar la rama feature en main, pero ambos han modificado las mismas líneas de un archivo. ¿Qué ocurre?(GIT)",
-    respuestas: [
-      "El merge se hace igual y Git elige una versión al azar",
-      "Git muestra un error de conflicto y detiene el merge",
-      "Git borra el archivo para evitar problemas",
-      "Git crea una rama nueva automáticamente"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "31. Estás en medio de un merge y hay conflictos. ¿Cómo se soluciona?(GIT)",
-    respuestas: [
-      "Borrar el archivo con conflicto y hacer commit",
-      "Editar el archivo, elegir cambios, guardar, marcar como resuelto y hacer commit",
-      "Volver a hacer git init",
-      "Hacer otro merge sin tocar nada"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "32. Una API devuelve objetos enormes con muchos campos, pero el frontend solo usa 3. ¿Qué deberías hacer para mejorar el rendimiento?(OPTIMIZACION)",
-    respuestas: [
-      "Enviar todos los campos igualmente",
-      "Enviar solo los campos necesarios",
-      "Añadir más lógica al backend",
-      "Aumentar el tamaño del servidor"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "33. Una página tarda mucho en cargar porque hace 12 consultas iguales cada vez. ¿Qué deberías optimizar?(OPTIMIZACION)",
-    respuestas: [
-      "El diseño del HTML",
-      "La cantidad de comentarios en el código",
-      "Las consultas repetidas",
-      "El tamaño del repositorio"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "34. Cambias el código para que el total del carrito salga distinto “sin querer”. ¿Qué ha pasado?(OPTIMIZACION)",
-    respuestas: [
-      "Has optimizado correctamente",
-      "Has cambiado el comportamiento del programa",
-      "Has reducido memoria",
-      "Has mejorado la red"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "35. Un listado enorme se carga completo en memoria aunque solo se muestran 20 elementos. ¿Qué deberías hacer?(OPTIMIZACION)",
-    respuestas: [
-      "Paginar los datos",
-      "Aumentar la RAM",
-      "Añadir más logs",
-      "Repetir la consulta varias veces"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "36. Una función recorre una lista completa buscando un valor que suele aparecer al principio. ¿Qué mejora aplicarías?(OPTIMIZACION)",
-    respuestas: [
-      "Seguir recorriendo toda la lista siempre",
-      "Salir en cuanto encuentres el valor",
-      "Duplicar la lista",
-      "Guardar la lista en un archivo"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "37. Una API tarda mucho porque devuelve imágenes, descripciones largas y datos que nadie usa. ¿Qué optimización aplicarías?(OPTIMIZACION)",
-    respuestas: [
-      "Reducir los campos enviados",
-      "Añadir más endpoints",
-      "Aumentar el número de hilos",
-      "Guardar todo en memoria"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "38. Una parte del sistema se ejecuta en cada petición y es muy lenta. ¿Qué deberías hacer primero?(OPTIMIZACION)",
-    respuestas: [
-      "Optimizar sin medir",
-      "Detectar dónde se pierde el tiempo",
-      "Cambiar toda la arquitectura",
-      "Añadir más clases"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "39. Tienes una lista de provincias que nunca cambia, pero la consultas en base de datos en cada petición. ¿Qué mejora aplicarías?(OPTIMIZACION)",
-    respuestas: [
-      "Guardarla en caché",
-      "Consultarla aún más veces",
-      "Enviarla por red en cada llamada",
-      "Guardarla en un archivo temporal"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "40. Una función lee un archivo varias veces sin necesidad. ¿Qué tipo de optimización es esta?(OPTIMIZACION)",
-    respuestas: [
-      "Global",
-      "Local",
-      "Dependiente de la máquina",
-      "Visual"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "41. Reduces el tamaño de las respuestas de una API y eliminas campos innecesarios. ¿Qué tipo de optimización es?(OPTIMIZACION)",
-    respuestas: [
-      "Dependiente de la máquina",
-      "Local",
-      "Independiente de la máquina",
-      "Visual"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "42. Aumentas la memoria del servidor porque el proceso se queda corto. ¿Qué tipo de optimización es?(OPTIMIZACION)",
-    respuestas: [
-      "Independiente de la máquina",
-      "Local",
-      "Global",
-      "Dependiente de la máquina"
+      "Alta disponibilidad",
+      "Gestión delegada",
+      "Pago por uso",
+      "Mantenimiento físico del HW"
     ],
     correcta: 3
   },
   {
-    pregunta: "43. Cambias cómo se cargan listados y reduces consultas en varias partes del sistema. ¿Qué tipo de optimización es?(OPTIMIZACION)",
+    pregunta: "6. ¿Qué es la escalabilidad?",
     respuestas: [
-      "Local",
-      "Global",
-      "Visual",
-      "Temporal"
+      "La garantía de que un servicio nunca sufrirá interrupciones físicas",
+      "La capacidad de los recursos para crecer o reducirse según las necesidades",
+      "La obligación de pagar una tarifa fija mensual independientemente del tráfico consumido",
+      "La exclusividad de usar un centro de datos dedicado a una única empresa"
     ],
     correcta: 1
   },
   {
-    pregunta: "44. El servidor va lento solo cuando hay muchos usuarios simultáneos. ¿Qué deberías revisar primero?(OPTIMIZACION)",
+    pregunta: "7. ¿Qué es la elasticidad?",
     respuestas: [
-      "El color del CSS",
-      "La cantidad de consultas",
-      "El tamaño del repositorio",
-      "Los comentarios del código"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "45. Una función abre un recurso de lectura pero no lo cierra. ¿Qué estás optimizando si lo corriges?(OPTIMIZACION)",
-    respuestas: [
-      "Nada, es solo estilo",
-      "Estabilidad y rendimiento local",
-      "El diseño del frontend",
-      "La red"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "46. Una API envía 5 MB de datos cuando solo se necesitan 50 KB. ¿Qué estás optimizando?(OPTIMIZACION)",
-    respuestas: [
-      "La red",
-      "El disco",
-      "El CSS",
-      "El número de commits"
+      "La capacidad de adaptarse en tiempo real, de forma temporal y automática, a los cambios en la demanda",
+      "El control exclusivo sobre el sistema operativo y las aplicaciones instaladas",
+      "La compra de servidores físicos adicionales para guardar en un almacén de reserva",
+      "El modelo de pago mediante una cuota anual fija sin importar el uso"
     ],
     correcta: 0
   },
   {
-    pregunta: "47. Tienes una variable llamada d que almacena el total de pedidos, pero nadie entiende qué significa. ¿Qué deberías aplicar?(REFACTORIZAR)",
+    pregunta: "8. ¿Qué modelo de servicio de nube es falso?",
     respuestas: [
-      "Extraer método",
-      "Renombrar variable",
-      "Extraer constante",
-      "Mover método"
+      "IaaS", 
+      "PaaS", 
+      "SaaS", 
+      "BaaS"
+    ],
+    correcta: 3
+  },
+  {
+    pregunta: "9. ¿Qué ofrece el modelo IaaS?",
+    respuestas: [
+      "Aplicaciones completamente listas para utilizar a través de internet sin necesidad de instalar o actualizar nada",
+      "Infraestructura virtualizada como servidores, discos y redes, donde el usuario controla el sistema operativo y aplicaciones",
+      "Una plataforma de desarrollo donde el usuario solo gestiona el código de la aplicación",
+      "Plataforma preparada para ejecutar aplicaciones sin preocuparse por la infraestructura, gestionando solo el código y su configuración"
     ],
     correcta: 1
   },
   {
-    pregunta: "48. Un método de 120 líneas mezcla validación, cálculos y envío de emails. Es difícil de leer. ¿Qué patrón aplicarías primero?(REFACTORIZAR)",
+    pregunta: "10. ¿Qué ofrece el modelo PaaS?",
     respuestas: [
-      "Extraer método",
-      "Extraer constante",
-      "Renombrar",
-      "Inline"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "49. En varios controladores aparece copiado el mismo código para validar emails. ¿Qué deberías hacer?(REFACTORIZAR)",
-    respuestas: [
-      "Mover campo",
-      "Extraer constante",
-      "Sustituir duplicación (DRY)",
-      "Renombrar método"
+      "Infraestructura virtualizada como servidores, discos y redes, donde el usuario controla el sistema operativo y aplicaciones",
+      "Aplicaciones completas como Google Docs o Microsoft 365",
+      "Plataforma preparada para ejecutar aplicaciones sin preocuparse por la infraestructura, gestionando solo el código y su configuración",
+      "Aplicaciones completamente listas para utilizar a través de internet sin necesidad de instalar o actualizar nada"
     ],
     correcta: 2
   },
   {
-    pregunta: "50. Tienes un número '8' repetido en varios sitios para validar la longitud mínima de una contraseña. ¿Qué patrón aplicarías?(REFACTORIZAR)",
+    pregunta: "11. ¿Qué ofrece el modelo SaaS?",
     respuestas: [
-      "Extraer constante",
-      "Extraer método",
-      "Renombrar variable",
-      "Mover método"
+      "Aplicaciones completamente listas para utilizar a través de internet sin necesidad de instalar o actualizar nada",
+      "Plataforma preparada para ejecutar aplicaciones sin preocuparse por la infraestructura, gestionando solo el código y su configuración",
+      "Infraestructura virtualizada como servidores, discos y redes, donde el usuario controla el sistema operativo y aplicaciones",
+      "Acceso a nivel de sistema operativo para configurar redes y máquinas virtuales"
     ],
     correcta: 0
   },
   {
-    pregunta: "51. Un controlador web contiene lógica de negocio, validaciones y acceso a base de datos. ¿Qué patrón aplicarías?(REFACTORIZAR)",
+    pregunta: "12. ¿Qué modelo de despliegue de nube es falso?",
     respuestas: [
-      "Extraer constante",
-      "Mover método",
-      "Renombrar variable",
-      "Sustituir duplicación"
+      "Nube pública", 
+      "Nube privada", 
+      "Nube híbrida", 
+      "Nube kun"
     ],
-    correcta: 1
+    correcta: 3
   },
   {
-    pregunta: "52. Una condición enorme con varios && y comprobaciones hace que el código sea difícil de entender. ¿Qué deberías hacer?(REFACTORIZAR)",
+    pregunta: "13. ¿Qué caracteriza a la nube pública?",
     respuestas: [
-      "Extraer método que explique la condición",
-      "Extraer constante",
-      "Mover campo",
-      "Renombrar clase"
+      "Los recursos se alojan en centros de datos del proveedor y se comparten entre múltiples clientes",
+      "Es una infraestructura alojada únicamente en los servidores locales del cliente sin conexión a terceros",
+      "Prohíbe el acceso a internet a cualquier usuario externo",
+      "Requiere la compra de hardware propietario por parte de la empresa consumidora"
     ],
     correcta: 0
   },
   {
-    pregunta: "53. Un método tiene un nombre como f() y nadie sabe qué hace. ¿Qué patrón aplicarías?(REFACTORIZAR)",
+    pregunta: "14. ¿Cuál no es una ventaja de la nube pública?",
     respuestas: [
-      "Extraer método",
-      "Renombrar método",
-      "Mover método",
-      "Extraer constante"
+      "Menor coste inicial",
+      "Escalabilidad inmediata",
+      "Mantenimiento a cargo del proveedor",
+      "Control directo y total sobre la infraestructura física"
+    ],
+    correcta: 3
+  },
+  {
+    pregunta: "15. Indica las 2 desventajas de nube pública",
+    respuestas: [
+      "Costes iniciales muy elevados y flexibilidad limitada",
+      "Menos control directo y posibles preocupaciones de privacidad en entornos regulados",
+      "Mantenimiento físico complejo a cargo del usuario y pago fijo obligatorio",
+      "Ausencia de acceso global y falta de escalabilidad"
     ],
     correcta: 1
   },
   {
-    pregunta: "54. Tienes un método que calcula el precio final, pero dentro también valida el email del usuario. ¿Qué patrón aplicarías?(REFACTORIZAR)",
+    pregunta: "16. ¿Qué caracteriza a la nube privada?",
     respuestas: [
-      "Extraer constante",
-      "Extraer método",
-      "Sustituir duplicación",
-      "Mover campo"
+      "Se comparte libremente entre miles de empresas desconocidas en centros de datos públicos",
+      "Es una infraestructura dedicada exclusivamente a una sola organización",
+      "Solo permite utilizar aplicaciones de correo electrónico SaaS",
+      "No requiere ningún tipo de inversión económica ni mantenimiento"
     ],
     correcta: 1
   },
   {
-    pregunta: "55. Una clase tiene un campo que realmente pertenece a otra clase donde se usa siempre. ¿Qué patrón aplicarías?(REFACTORIZAR)",
+    pregunta: "17. ¿Cuál es una ventaja de la nube privada?",
     respuestas: [
-      "Renombrar variable",
-      "Extraer método",
-      "Mover campo",
-      "Extraer constante"
+      "Menor coste financiero en comparación con la nube pública",
+      "Mayor control, seguridad y personalización",
+      "Ausencia total de responsabilidad en la gestión del sistema",
+      "Escalabilidad ilimitada inmediata sin presupuesto previo"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "18. Indica las 3 desventajas de nube privada",
+    respuestas: [
+      "Costes más altos, escalabilidad y flexibilidad limitada",
+      "Menor seguridad física, ausencia de opciones de configuración y pago por uso estricto",
+      "Dependencia absoluta de proveedores externos para SaaS, lentitud de red global e imposibilidad de crear usuarios",
+      "Falta total de control sobre los datos y obligatoriedad de compartir recursos con otras empresas"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "19. ¿Qué caracteriza a la nube híbrida?",
+    respuestas: [
+      "La exclusión total de cualquier servicio que funcione a través de internet",
+      "La combinación de nube privada y pública",
+      "El uso exclusivo de servidores locales sin conexión remota",
+      "La sustitución de administradores por IA"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "20. ¿Cómo se distribuye la carga de trabajo en la nube híbrida?",
+    respuestas: [
+      "La empresa mantiene los datos sensibles en la nube privada y usa la pública para cargas temporales",
+      "Todos los datos sensibles se publican en la nube pública y las tareas temporales se ejecutan únicamente on-premise",
+      "Se eliminan los servidores privados y solo se usan aplicaciones SaaS gratuitas",
+      "Toda la carga se ejecuta en servidores locales sin conexión externa"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "21. ¿Qué es AWS?",
+    respuestas: [
+      "Una plataforma de servicios en la nube segura",
+      "El tacón de GTA V",
+      "Una base de datos en papel estilo Alicia",
+      "Un teclado para darle una ostia"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "22. ¿Qué es EC2?",
+    respuestas: [
+      "Servicio de almacenamiento de objetos no relacionales",
+      "Servidores virtuales",
+      "Un gestor de identidades, usuarios y permisos",
+      "Un servicio de base de datos relacional"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "23. ¿Qué es S3?",
+    respuestas: [
+      "Un servicio de ejecución de código sin servidor",
+      "Servicio de almacenamiento de objetos",
+      "Un motor de base de datos SQL",
+      "Una red privada virtual"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "24. ¿Qué es IAM?",
+    respuestas: [
+      "Gestión de usuarios y permisos",
+      "Un servicio de alquiler de máquinas virtuales",
+      "Un sistema de archivos de bloques",
+      "Una plataforma de correo electrónico"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "25. ¿Qué es RDS?",
+    respuestas: [
+      "Servicio enfocado en bases de datos relacionales",
+      "Un servicio de almacenamiento masivo",
+      "Un servicio para creación de usuarios",
+      "Una herramienta de análisis en tiempo real"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "26. ¿Qué es Lambda?",
+    respuestas: [
+      "Un centro de datos físico en las oficinas del cliente",
+      "Ejecución de código sin servidor",
+      "Un servicio de almacenamiento de objetos",
+      "Gestión de usuarios y permisos"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "27. ¿Qué son los servicios web?",
+    respuestas: [
+      "Cualquier software disponible a través de internet",
+      "Una página web estática guardada en el disco local que no requiere red",
+      "Un servidor físico instalado únicamente en las instalaciones del cliente",
+      "Un cableado de red para interconectar ordenadores locales"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "28. ¿De qué depende la elección de un servicio o modelo en la nube?",
+    respuestas: [
+      "De la cantidad de licencias de software físico que posea la empresa previamente",
+      "De los objetivos empresariales y requisitos tecnológicos",
+      "De la obligación legal de contratar siempre el nivel de control sobre la infraestructura física",
+      "Del tamaño del centro de datos local"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "29. Diferencia entre escalabilidad vertical y horizontal",
+    respuestas: [
+      "La vertical añade más recursos a un servidor y la horizontal añade más servidores",
+      "La vertical aumenta el espacio físico del centro de datos y la horizontal reduce la potencia de cálculo",
+      "La horizontal es solo para bases de datos relacionales y la vertical para archivos de imagen",
+      "La vertical elimina servidores y la horizontal los sustituye por redes locales"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "30. ¿Qué es CAF de AWS?",
+    respuestas: [
+      "Un marco estructurado para planificar y acelerar la adopción de la nube",
+      "Un servicio de almacenamiento masivo de archivos estáticos",
+      "Un tipo de servidor virtual para ejecutar código sin servidor (Serverless)",
+      "Un protocolo de seguridad VPN"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "31. ¿Qué factores influyen en el coste de los servicios de AWS?",
+    respuestas: [
+      "El número de empleados contratados por la empresa cliente, el precio y las horas de uso",
+      "Tipo de recurso, horas de uso, almacenamiento y transferencia de datos",
+      "El precio del hardware físico, las horas de uso y la cantidad de empleados contratados",
+      "Una tarifa plana fija obligatoria"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "32. Respecto a la afirmación 'En la nube solo pagas por lo que usas, por lo tanto la nube siempre es más barata que el modelo on-premise', ¿cuál es la valoración correcta y su principal riesgo económico?",
+    respuestas: [
+      "Es falsa porque los proveedores de nube aplican una cuota fija mensual de mantenimiento de infraestructura que se cobra al margen del uso real de los servidores virtualizados",
+      "Es falsa porque, aunque el modelo sea de pago por uso, si la arquitectura no está optimizada o no se monitorean los recursos en ejecución, se pueden generar gastos descontrolados que superen el coste del modelo on-premise",
+      "Es falsa porque el pago por uso solo se aplica a los servicios de almacenamiento (SaaS), mientras que el procesamiento de datos (IaaS) exige una inversión de capital inicial (CapEx) obligatoria",
+      "Es falsa porque en la nube pública es obligatorio contratar una reserva mínima de instancias con compromiso de permanencia anual antes de poder desplegar aplicaciones"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "33. ¿Qué relación existe entre la arquitectura de una app y su coste?",
+    respuestas: [
+      "Ninguna, el coste de una aplicación en la nube es siempre idéntico sin importar su diseño",
+      "Una buena arquitectura de nube reduce costes al consumir recursos solo cuando se necesitan",
+      "Las aplicaciones más antiguas instaladas en la nube son siempre más económicas que las modernas",
+      "Cuantos más servidores físicos dedicados solicite la arquitectura, más barato será el servicio"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "34. ¿Qué ventajas económicas puede aportar la nube?",
+    respuestas: [
+      "Ahorro inicial, pago por uso y escalabilidad",
+      "Ahorro inicial y pago por uso pero con cuota fija obligatoria para mantener la escalabilidad",
+      "Eliminación del pago por uso",
+      "Mantenimiento del gasto inicial sin escalabilidad y con pago por uso"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "35. ¿Qué es AWS Pricing Calculator?",
+    respuestas: [
+      "Una herramienta web gratuita de AWS que permite estimar, planificar y simular el coste de arquitecturas y servicios en la nube antes de desplegarlos",
+      "Una herramienta web gratuita de AWS que realiza cobros automáticos mensuales a la cuenta bancaria del usuario sin previo aviso",
+      "Una herramienta web gratuita de AWS diseñada para gestionar y consultar bases de datos relacionales directamente mediante SQL",
+      "Una herramienta web gratuita de AWS que analiza y escanea el código fuente de funciones Serverless para detectar errores de sintaxis"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "36. Tenemos una app con 1 servidor. De repente pasa de 100 usuarios habituales a 10.000 usuarios durante un par de horas por una promoción puntual. El sistema detecta el pico de tráfico, añade automáticamente 5 servidores más para repartir la carga y los apaga de forma automática cuando el tráfico vuelve a 100 usuarios para no pagar de más,  ¿Qué se usa?",
+    respuestas: [
+      "Escalabilidad vertical",
+      "Escalabilidad horizontal",
+      "Vertical y horizontal",
+      "Elasticidad"
+    ],
+    correcta: 3
+  },
+  {
+    pregunta: "37. Una empresa tiene una base de datos en un servidor que se está quedando sin memoria. Deciden cambiar esa máquina virtual por una de mayor tamaño con el doble de CPU y RAM. Al mismo tiempo, añaden 2 servidores web idénticos en paralelo detrás de un equilibrador de carga para atender a más usuarios a la vez,  ¿Qué se usa?",
+    respuestas: [
+      "Escalabilidad vertical",
+      "Escalabilidad horizontal",
+      "Vertical y horizontal",
+      "Elasticidad"
     ],
     correcta: 2
   },
   {
-    pregunta: "56. Ves que dos métodos distintos tienen exactamente el mismo bloque de código para calcular un descuento. ¿Qué deberías hacer?(REFACTORIZAR)",
+    pregunta: "38. Una empresa alquila servidores virtuales y almacenamiento en la nube, encargándose de instalar su propio sistema operativo Linux, configurar los cortafuegos de red y desplegar manualmente sus bases de datos, ¿Qué modelo de servicio utiliza?",
     respuestas: [
-      "Renombrar variable",
-      "Extraer método y reutilizarlo",
-      "Mover campo",
-      "Extraer constante"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "57. Una condición compleja aparece en varios sitios. ¿Qué patrón aplicarías?(REFACTORIZAR)",
-    respuestas: [
-      "Extraer método explicativo",
-      "Extraer constante",
-      "Mover método",
-      "Renombrar variable"
+      "IaaS", 
+      "PaaS", 
+      "SaaS", 
+      "Ninguno xulo playa"
     ],
     correcta: 0
   },
   {
-    pregunta: "58. Cambias el nombre de un método y el IDE actualiza todas las referencias automáticamente. ¿Qué patrón has aplicado?(REFACTORIZAR)",
+    pregunta: "39. Un equipo de desarrollo sube directamente el código fuente de su app a un entorno de ejecución gestionado donde el proveedor de la nube se encarga de mantener el sistema operativo, actualizar los servidores web y gestionar la infraestructura,  ¿Qué modelo de servicio utiliza?",
     respuestas: [
-      "Extract Method",
-      "Move Method",
-      "Rename",
-      "Inline"
+      "IaaS", 
+      "PaaS", 
+      "SaaS", 
+      "Payo"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "40. Una empresa utiliza la plataforma Salesforce a través del navegador web para gestionar las ventas y contactos de sus clientes sin instalar software ni administrar servidores,  ¿Qué modelo de servicio utiliza?",
+    respuestas: [
+      "IaaS", 
+      "PaaS", 
+      "SaaS", 
+      "Pileta"
     ],
     correcta: 2
   },
   {
-    pregunta: "59. Un método tiene demasiadas responsabilidades: valida, calcula, guarda y envía emails. ¿Qué patrón aplicarías para empezar a dividirlo?(REFACTORIZAR)",
+    pregunta: "41. Los empleados de una empresa utilizan Microsoft 365 y Dropbox en la nube para crear documentos de texto, compartir hojas de cálculo y guardar archivos corporativos,  ¿Qué modelo de servicio utiliza?",
     respuestas: [
-      "Extraer constante",
-      "Extraer método",
-      "Mover campo",
-      "Renombrar variable"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "60. Un valor como 'ADMIN' aparece repetido en 10 sitios. ¿Qué patrón aplicarías?(REFACTORIZAR)",
-    respuestas: [
-      "Extraer constante",
-      "Extraer método",
-      "Mover método",
-      "Sustituir duplicación"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "61. El controlador está lleno de lógica que debería estar en el servicio. ¿Qué patrón aplicarías?(REFACTORIZAR)",
-    respuestas: [
-      "Renombrar",
-      "Mover método",
-      "Extraer constante",
-      "Extraer método"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "62. Tienes un NullPointerException potencial porque haces rol.equals(\"ADMIN\") cuando rol puede ser null. ¿Qué detectaría un analizador?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Un problema de estilo",
-      "Un bug probable",
-      "Un import innecesario",
-      "Un método demasiado corto"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "63. En tu código aparece una variable declarada pero nunca usada. ¿Qué avisaría un analizador estático?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Código muerto o innecesario",
-      "Error de compilación",
-      "Problema de red",
-      "Problema de concurrencia"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "64. Un método tiene 120 líneas, muchos if anidados y es difícil de leer. ¿Qué avisaría un analizador?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Que falta un comentario",
-      "Que el método es demasiado largo o complejo",
-      "Que la clase debe ser final",
-      "Que el nombre del archivo es incorrecto"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "65. El analizador te marca que usas un número '8' repetido en varias validaciones. ¿Qué regla está señalando?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Evitar duplicación",
-      "Evitar números mágicos",
-      "Evitar imports estáticos",
-      "Evitar métodos privados"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "66. El IDE subraya una condición que siempre es falsa y nunca se ejecuta. ¿Qué tipo de problema es?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Estilo",
-      "Código muerto",
-      "Problema de red",
-      "Problema de concurrencia"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "67. Un analizador te avisa de que un método tiene demasiadas responsabilidades. ¿Qué está evaluando?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Rendimiento",
-      "Complejidad y mantenibilidad",
-      "Seguridad avanzada",
-      "Configuración del servidor"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "68. El analizador marca que una clase tiene imports que no se usan. ¿Qué tipo de aviso es?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Bug crítico",
-      "Estilo y convenciones",
-      "Problema de concurrencia",
-      "Problema de red"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "69. El IDE te muestra una bombilla con un 'quick fix' para renombrar una variable confusa. ¿Qué está haciendo?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Refactorización automática",
-      "Optimización de rendimiento",
-      "Compilación incremental",
-      "Ejecución de pruebas"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "70. El analizador detecta que un método nunca se llama desde ninguna parte del proyecto. ¿Qué tipo de problema es?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Código muerto",
-      "Problema de seguridad",
-      "Problema de concurrencia",
-      "Error de compilación"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "71. El equipo discute sobre estilo de código, pero el analizador ya tiene reglas configuradas. ¿Qué ventaja aporta?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Evita que el código compile",
-      "Evita discusiones porque las reglas son comunes",
-      "Aumenta el tamaño del proyecto",
-      "Reduce la RAM usada"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "72. Un analizador te avisa de que una condición es redundante porque ya se comprobó antes. ¿Qué está detectando?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Problema de red",
-      "Código innecesario",
-      "Error de compilación",
-      "Problema de seguridad"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "73. Configuras el analizador para ignorar la carpeta target/. ¿Qué estás haciendo?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Cambiando la lógica del programa",
-      "Ajustando exclusiones para evitar ruido",
-      "Eliminando código",
-      "Optimizando la red"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "74. El analizador te avisa de que un método tiene demasiados parámetros y es difícil de mantener. ¿Qué está midiendo?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Estilo visual",
-      "Complejidad",
-      "Seguridad",
-      "Rendimiento"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "75. Una herramienta como Checkstyle te marca que los nombres de métodos no siguen la convención. ¿Qué tipo de problema es?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Bug crítico",
-      "Estilo y consistencia",
-      "Problema de red",
-      "Problema de concurrencia"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "76. SpotBugs te avisa de que una comparación de cadenas puede fallar por null. ¿Qué tipo de aviso es?(ANALIZAR CODIGO)",
-    respuestas: [
-      "Estilo",
-      "Bug probable",
-      "Código muerto",
-      "Complejidad"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "77. Encuentras un comentario que dice // incrementa i justo encima de i++;. ¿Qué deberías hacer?(DOCUMENTACION)",
-    respuestas: [
-      "Mantenerlo porque explica el código",
-      "Borrarlo porque no aporta nada",
-      "Convertirlo en Javadoc",
-      "Añadir más comentarios similares"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "78. Un método público calcula el precio final y tiene reglas importantes de entrada (no acepta negativos). ¿Qué deberías usar?(DOCUMENTACION)",
-    respuestas: [
-      "Un comentario // calcula precio",
-      "Nada, el nombre ya basta",
-      "Javadoc con @param y @throws",
-      "Un comentario al final del archivo"
+      "IaaS", 
+      "PaaS", 
+      "SaaS", 
+      "Xokas"
     ],
     correcta: 2
   },
   {
-    pregunta: "79. Un comentario explica “aplicamos IVA reducido por normativa”. ¿Qué tipo de comentario es?(DOCUMENTACION)",
+    pregunta: "42. Una empresa crea una instancia EC2 y administra el sistema operativo,  ¿Qué modelo de servicio utiliza?",
     respuestas: [
-      "Innecesario",
-      "Explica el porqué y aporta valor",
-      "Un comentario redundante",
-      "Un comentario mal formado"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "80. Un método privado muy simple tiene un Javadoc enorme. ¿Qué deberías hacer?(DOCUMENTACION)",
-    respuestas: [
-      "Mantenerlo",
-      "Ampliarlo aún más",
-      "Quitar el Javadoc y mejorar el nombre del método",
-      "Convertirlo en comentario de una línea"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "81. Un compañero pregunta por qué un método hace una validación extra rara. No está documentado. ¿Qué deberías añadir?(DOCUMENTACION)",
-    respuestas: [
-      "Un comentario explicando el motivo",
-      "Un comentario explicando línea por línea",
-      "Un Javadoc con @deprecated",
-      "Nada, que lo deduzca del código"
+      "IaaS", 
+      "PaaS", 
+      "SaaS", 
+      "Amogus"
     ],
     correcta: 0
   },
   {
-    pregunta: "82. Ves un método público sin documentación y no queda claro qué devuelve. ¿Qué deberías hacer?(DOCUMENTACION)",
+    pregunta: "43. Un desarrollador despliega su código Python utilizando el servicio gestionado AWS Elastic Beanstalk, encargándose solo del mantenimiento de la aplicación sin preocuparse por la máquina virtual subyacente,  ¿Qué modelo de servicio utiliza?",
     respuestas: [
-      "Añadir Javadoc con @return",
-      "Añadir un comentario // devuelve algo",
-      "Cambiar el nombre del método sin más",
-      "Eliminar el método"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "83. Un método lanza IllegalArgumentException si un parámetro es negativo, pero no está indicado en ningún sitio. ¿Qué falta?(DOCUMENTACION)",
-    respuestas: [
-      "Un comentario al final",
-      "Un @throws en el Javadoc",
-      "Un comentario TODO",
-      "Un import nuevo"
+      "IaaS", 
+      "PaaS", 
+      "SaaS", 
+      "Autonomo"
     ],
     correcta: 1
-  },
-  {
-    pregunta: "84. El proyecto tiene reglas de estilo y Javadoc configuradas para todo el equipo. ¿Qué ventaja aporta?(DOCUMENTACION)",
-    respuestas: [
-      "Evita que el código compile",
-      "Evita discusiones sobre estilo",
-      "Hace el código más lento",
-      "Elimina la necesidad de pruebas"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "85. Un comentario explica un caso especial que solo ocurre con usuarios bloqueados. ¿Qué tipo de comentario es?(DOCUMENTACION)",
-    respuestas: [
-      "Innecesario",
-      "Útil porque explica un edge case",
-      "Incorrecto porque no usa Javadoc",
-      "Debe eliminarse siempre"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "86. Generas Javadoc HTML desde IntelliJ y faltan clases. ¿Qué suele ser el problema?(DOCUMENTACION)",
-    respuestas: [
-      "El proyecto no compila",
-      "El Scope no incluye todo el proyecto",
-      "Falta un import",
-      "El código tiene demasiados comentarios"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "87. Un método público tiene parámetros con restricciones importantes (no null, rangos). ¿Qué deberías documentar?(DOCUMENTACION)",
-    respuestas: [
-      "Solo el nombre del método",
-      "Nada, se entiende",
-      "@param explicando las restricciones",
-      "Un comentario al final del archivo"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "88. Ves un comentario que explica “esto está así por un bug del proveedor externo”. ¿Qué tipo de comentario es?(DOCUMENTACION)",
-    respuestas: [
-      "Innecesario",
-      "Explica una decisión importante",
-      "Un comentario redundante",
-      "Un comentario mal formado"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "89. Un README explica cómo ejecutar el proyecto y cómo probarlo. ¿Qué parte de la documentación cubre?(DOCUMENTACION)",
-    respuestas: [
-      "Reglas de negocio",
-      "Puntos de entrada",
-      "Nivel proyecto",
-      "Decisiones raras"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "90. Deck y Card. Una baraja crea todas sus cartas al inicializarse. Las cartas existen como objetos independientes y pueden usarse en otros contextos. La baraja solo las mantiene para mezclarlas y repartirlas. Las cartas no dependen de la baraja para existir. ¿Qué relación es?",
-    respuestas: [
-      "Composición",
-      "Agregación",
-      "Asociación",
-      "Realización"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "91. Player y Stats. Un jugador tiene un objeto Stats con vida y energía. Stats no depende del jugador para existir y podría asignarse a otro personaje. El jugador solo lo referencia. Ambos pueden existir por separado. ¿Qué relación es?",
-    respuestas: [
-      "Composición",
-      "Asociación",
-      "Generalización",
-      "Dependencia"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "92. Team y Champion. Un equipo está formado por varios campeones. Un campeón puede cambiar de equipo o no pertenecer a ninguno. Si el equipo desaparece, los campeones siguen existiendo. El equipo solo los agrupa. ¿Qué relación es?",
-    respuestas: [
-      "Composición",
-      "Agregación",
-      "Asociación",
-      "Realización"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "93. Champion y Items. Un campeón puede tener varios objetos equipados. Los objetos pueden existir sin el campeón y moverse entre ellos. Si el campeón desaparece, los objetos no se destruyen. ¿Qué relación es?",
-    respuestas: [
-      "Composición",
-      "Agregación",
-      "Generalización",
-      "Dependencia"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "94. Champion y Ability. Un campeón tiene habilidades que solo existen para él. Si el campeón desaparece, las habilidades también desaparecen. No pueden existir por separado. ¿Qué relación es?",
-    respuestas: [
-      "Agregación",
-      "Composición",
-      "Asociación",
-      "Realización"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "95. Deck y su lista interna de cartas generadas. La baraja crea sus cartas internamente. No existen antes ni después de la baraja. Si la baraja se destruye, las cartas desaparecen. ¿Qué relación es?",
-    respuestas: [
-      "Asociación",
-      "Agregación",
-      "Composición",
-      "Generalización"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "96. Ability, PassiveAbility y ActiveAbility. Ambas clases extienden Ability y comparten estructura pero implementan comportamiento distinto. ¿Qué relación es?",
-    respuestas: [
-      "Realización",
-      "Generalización",
-      "Agregación",
-      "Dependencia"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "97. Potion y HealthPotion. HealthPotion hereda de Potion y añade comportamiento específico. Es un tipo de Potion. ¿Qué relación es?",
-    respuestas: [
-      "Composición",
-      "Generalización",
-      "Realización",
-      "Asociación"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "98. Player implementa IManageHealth. La interfaz define métodos y Player los implementa. No hay código en la interfaz, solo contrato. ¿Qué relación es?",
-    respuestas: [
-      "Generalización",
-      "Realización",
-      "Agregación",
-      "Dependencia"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "99. ArrayList implementa List. List define el contrato y ArrayList lo cumple con implementación concreta. ¿Qué relación es?",
-    respuestas: [
-      "Realización",
-      "Composición",
-      "Asociación",
-      "Agregación"
-    ],
-    correcta: 0
   }
 ];
+
 
 // Función para barajar un array
 function barajarArray(array) {
