@@ -250,42 +250,12 @@ const preguntas = [
     correcta: 2
   },
   {
-    pregunta: "26. ¿Cómo se conecta un contenedor activo con ID 'c123' a una red existente llamada 'red_test'?",
-    respuestas: [
-      "docker network connect red_test c123",
-      "docker network add red_test c123",
-      "docker network join red_test c123",
-      "docker attach network red_test c123"
-    ],
-    correcta: 0
-  },
-  {
     pregunta: "27. ¿Qué ocurre cuando se desconecta un contenedor de una red mediante 'docker network disconnect'?",
     respuestas: [
       "El contenedor se borra inmediatamente de la máquina anfitriona.",
       "El contenedor pierde el acceso a la red especificada pero sigue ejecutándose.",
       "La red se elimina automáticamente del demonio de Docker.",
       "Se detienen todos los demás contenedores conectados a dicha red."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "28. ¿Cómo permite la resolución DNS interna de Docker comunicar dos contenedores en una red personalizada?",
-    respuestas: [
-      "Únicamente mediante sus direcciones IP dinámicas asignadas al arrancar.",
-      "Configurando manualmente el fichero /etc/hosts en el anfitrión antes de cada ejecución.",
-      "Haciendo uso del nombre del contenedor (--name) como si fuera un nombre de dominio (hostname).",
-      "A través de las direcciones MAC asignadas por el router físico."
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "29. ¿Qué herramienta o imagen ligera se suele utilizar para probar conectividad web y DNS en redes privadas?",
-    respuestas: [
-      "ubuntu:latest con Firefox",
-      "busybox (ej. usando el comando 'wget -qO- http://nombre_contenedor')",
-      "nginx:alpine en modo interactivo",
-      "wireshark-cli"
     ],
     correcta: 1
   },
@@ -310,26 +280,6 @@ const preguntas = [
     correcta: 0
   },
   {
-    pregunta: "32. ¿Qué diferencia existe entre un Volumen Nombrado y un Bind Mount?",
-    respuestas: [
-      "El volumen nombrado se borra al apagar el PC y el bind mount es siempre de solo lectura.",
-      "El volumen nombrado es gestionado por Docker en su propio directorio y el bind mount monta una ruta específica del host.",
-      "El bind mount solo funciona en Windows y el volumen nombrado solo en sistemas Linux.",
-      "No hay diferencia, ambos guardan los datos dentro de la propia imagen inmutable."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "33. ¿Cuál es la sintaxis para realizar un Bind Mount conectando '/home/user/target' del host a '/app' en el contenedor?",
-    respuestas: [
-      "docker run -d -v /app:/home/user/target nginx",
-      "docker run -d --bind /home/user/target:/app nginx",
-      "docker run -d -v /home/user/target:/app nginx",
-      "docker run -d -mount /app=/home/user/target nginx"
-    ],
-    correcta: 2
-  },
-  {
     pregunta: "34. ¿Qué ocurre con los datos almacenados en un Volumen Nombrado cuando se elimina el contenedor que lo usaba?",
     respuestas: [
       "Los datos del volumen se borran de forma permanente e irrecuperable.",
@@ -338,26 +288,6 @@ const preguntas = [
       "Los datos se mantienen intactos en el anfitrión hasta que se borre el volumen explícitamente."
     ],
     correcta: 3
-  },
-  {
-    pregunta: "35. ¿Para qué se utiliza la opción '--tmpfs /app' al arrancar un contenedor?",
-    respuestas: [
-      "Para guardar los datos en un disco SSD secundario del anfitrión.",
-      "Para crear un montaje temporal únicamente en la memoria RAM del host (sin escribir en disco).",
-      "Para limitar el uso de memoria RAM a un máximo de 512 Megabytes.",
-      "Para realizar copias de seguridad cada 10 minutos de la carpeta /app."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "36. ¿Cómo se realiza la copia de seguridad de un volumen montado en '/datos' de 'cont1' hacia '/backup/copia.tar' en el host?",
-    respuestas: [
-      "docker run --rm --volumes-from cont1 -v /backup_host:/backup ubuntu bash -c \"cd /datos && tar cvf /backup/copia.tar .\"",
-      "docker volume backup cont1:/datos /backup/copia.tar",
-      "docker cp cont1:/datos/*.tar /backup/copia.tar",
-      "docker export volume cont1 > /backup/copia.tar"
-    ],
-    correcta: 0
   },
   {
     pregunta: "37. ¿Qué nombre de archivo por defecto busca el comando 'docker-compose up' para desplegar servicios?",
@@ -440,16 +370,6 @@ const preguntas = [
     correcta: 1
   },
   {
-    pregunta: "45. ¿Qué comando permite autenticarse en un registro remoto pasando la contraseña o token por entrada estándar?",
-    respuestas: [
-      "docker login --token ghp_xxxx",
-      "docker auth ghcr.io --key TOKEN",
-      "echo \"TOKEN\" | docker login ghcr.io -u usuario --password-stdin",
-      "docker connect ghcr.io -p TOKEN"
-    ],
-    correcta: 2
-  },
-  {
     pregunta: "46. ¿Qué ocurre si ejecutas 'docker run' especificando una imagen que no existe en tu equipo local?",
     respuestas: [
       "El comando falla de inmediato con un error de archivo no encontrado.",
@@ -470,19 +390,9 @@ const preguntas = [
     correcta: 0
   },
   {
-    pregunta: "48. ¿Qué antecedente histórico de Linux introdujo por primera vez en 1982 el aislamiento del sistema de ficheros?",
-    respuestas: [
-      "FreeBSD Jail",
-      "LXC",
-      "KVM",
-      "chroot"
-    ],
-    correcta: 3
-  },
-  {
     pregunta: "49. ¿Qué tres pilares componen la arquitectura Cliente-Servidor de Docker?",
     respuestas: [
-      "Cliente (CLI), Servidor (Docker Daemon / dockerd) y Registro (Registry / Docker Hub).",
+      "Cliente, Servidor y Registro.",
       "Hipervisor, Kernel y Sistema Operativo Invitado (Guest OS).",
       "Namespaces, Cgroups y Chroot.",
       "Docker Compose, Docker Swarm y Docker Desktop."
