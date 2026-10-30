@@ -1,415 +1,270 @@
 const preguntas = [
   {
-    pregunta: "1. ¿Cuál es la diferencia fundamental entre una Máquina Virtual (VM) y un Contenedor en cuanto al SO?",
+    pregunta: "1. ¿Cuál es el principal interés de los inversores como stakeholders?",
     respuestas: [
-      "La VM solo emula hardware y el contenedor instala un Kernel propio por cada servicio.",
-      "La VM comparte el Kernel del anfitrión y el contenedor ejecuta un Guest OS pesado.",
-      "VM simula el HW del sistema y el contenedor utiliza el SO compartiendo kernel.",
-      "No hay diferencia, ambos virtualizan exactamente el mismo nivel de software."
+      "Conocer el impacto medioambiental en la zona donde viven.",
+      "Recaudar impuestos de la empresa.",
+      "Conseguir el máximo rendimiento de sus acciones.",
+      "Mejorar las condiciones laborales de la plantilla."
     ],
     correcta: 2
   },
   {
-    pregunta: "2. ¿Qué diferencia existe entre una Máquina Virtual de Proceso y un Hipervisor (VMM)?",
+    pregunta: "2. ¿Qué stakeholders son las personas que, sin ser necesariamente clientes, viven en la zona donde se ubica la empresa?",
     respuestas: [
-      "La VM de proceso emula un entorno para un programa (ej. JVM) y el hipervisor virtualiza hardware para un SO completo.",
-      "La VM de proceso emula un SO completo y el hipervisor solo ejecuta scripts de Bash.",
-      "El hipervisor solo funciona en Windows y la VM de proceso solo en Linux.",
-      "Son idénticos, ambos requieren instalar un SO invitado de gigabytes."
+      "Los acreedores.",
+      "Los proveedores.",
+      "Las comunidades locales.",
+      "Las instituciones políticas."
+    ],
+    correcta: 2
+  },
+  {
+    pregunta: "3. Dentro de las 5P, la P de Prosperidad se relaciona principalmente con...",
+    respuestas: [
+      "Políticas económicas basadas en las finanzas sostenibles y el reparto justo de la riqueza.",
+      "Una sociedad alejada de la conflictividad y las injerencias.",
+      "La conservación de la biodiversidad en la tierra y en los océanos.",
+      "Las alianzas entre pueblos, gobiernos y empresas."
     ],
     correcta: 0
   },
   {
-    pregunta: "3. ¿Qué componente del Kernel de Linux se encarga de aislar procesos, red y usuarios en contenedores?",
+    pregunta: "4. ¿Qué tres dimensiones debe equilibrar el desarrollo sostenible según la definición de la unidad?",
     respuestas: [
-      "Cgroups (Control Groups)",
-      "Chroot v2",
-      "Docker Daemon",
-      "Linux Namespaces"
+      "La competitividad, la innovación y la digitalización.",
+      "El crecimiento de la economía, el respeto del medioambiente y el bienestar social.",
+      "El beneficio empresarial, la reducción de impuestos y el empleo.",
+      "La seguridad jurídica, la transparencia y la gobernanza."
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "5. ¿Qué tipo de sostenibilidad se centra en la preservación de la biodiversidad sin renunciar al progreso económico y social?",
+    respuestas: [
+      "Sostenibilidad ambiental.",
+      "Sostenibilidad social.",
+      "Sostenibilidad económica.",
+      "Sostenibilidad institucional."
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "6. La empresa Cemex, que favorece la autoconstrucción para que las comunidades obtengan una vivienda digna, es un ejemplo de sostenibilidad...",
+    respuestas: [
+      "Económica.",
+      "Ambiental.",
+      "Institucional.",
+      "Social."
     ],
     correcta: 3
   },
   {
-    pregunta: "4. ¿Qué función cumplen los Cgroups (Control Groups) en la tecnología de contenedores?",
+    pregunta: "7. La Agenda 2030 fue aprobada por la ONU en septiembre de 2020.",
     respuestas: [
-      "Aislar la tabla de procesos y la interfaz de red del contenedor.",
-      "Limitar y controlar el uso de recursos de hardware como CPU, RAM e I/O.",
-      "Asignar un nombre único al contenedor dentro del registro de Docker Hub.",
-      "Gestionar la autenticación de usuarios root en la máquina anfitriona."
+      "Verdadero",
+      "Falso"
     ],
     correcta: 1
   },
   {
-    pregunta: "5. ¿Qué realiza exactamente el comando 'docker run -d -p 1200:80 nginx'?",
+    pregunta: "8. ¿Cuál de estos es uno de los elementos clave del Acuerdo de París?",
     respuestas: [
-      "Crea y arranca un contenedor en segundo plano (-d) exponiendo el puerto 80 del contenedor en el puerto 1200 del anfitrión.",
-      "Arranca Nginx de forma interactiva en el puerto 80 del anfitrión mapeado al 1200 del contenedor.",
-      "Descarga la imagen de Nginx y la compila en el puerto 1200 sin ejecutar ningún contenedor.",
-      "Detiene los contenedores de Nginx que estén escuchando en el puerto 1200."
+      "Limitar el aumento de las temperaturas a 1,5 °C.",
+      "Eliminar por completo el uso de combustibles fósiles antes de 2025.",
+      "Revisar la contribución de los países a la reducción de emisiones cada diez años.",
+      "Prohibir la financiación climática a los países en desarrollo."
     ],
     correcta: 0
   },
   {
-    pregunta: "6. ¿Cuál es la diferencia de rendimiento típica entre un contenedor y una Máquina Virtual?",
+    pregunta: "9. ¿Cuántas metas plantea la Agenda 2030 en total?",
     respuestas: [
-      "La VM es más rápida por tener acceso directo al hardware dedicado.",
-      "El contenedor es mucho más lento debido a la capa extra de emulación del Kernel.",
-      "El contenedor tiene un rendimiento cercano al nativo por ejecutar directamente sobre el Kernel del anfitrión.",
-      "Rinden exactamente igual en consumo de CPU y memoria RAM."
+      "17.",
+      "169.",
+      "196.",
+      "100."
     ],
-    correcta: 2
+    correcta: 1
   },
   {
-    pregunta: "7. ¿Qué comando permite ejecutar un proceso interactivo dentro de un contenedor en ejecución?",
+    pregunta: "10. ¿Cuál de los siguientes es un indicador de sostenibilidad social?",
     respuestas: [
-      "docker run -it <id> bash",
-      "docker start -ai <id>",
-      "docker attach <id>",
-      "docker exec -it <id> bash"
+      "La materia prima utilizada.",
+      "El ciclo de vida del producto.",
+      "El volumen de negocio.",
+      "La conciliación laboral y familiar."
     ],
     correcta: 3
   },
   {
-    pregunta: "8. ¿Qué diferencia existe entre 'docker exec -d' y 'docker exec -it'?",
+    pregunta: "11. Según la unidad, ¿cuál es posiblemente el criterio ASG menos extendido, aunque el Pacto Mundial de la ONU insta a las empresas a aplicarlo?",
     respuestas: [
-      "-d ejecuta en segundo plano (detached) y -it de forma interactiva conectando la terminal.",
-      "-d borra el contenedor al terminar y -it lo reinicia automáticamente.",
-      "-d asigna variables de entorno y -it muestra únicamente los logs del proceso.",
-      "-d es para contenedores parados y -it para contenedores en ejecución."
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "9. ¿Cómo se copia un fichero desde la máquina anfitriona hacia el interior de un contenedor?",
-    respuestas: [
-      "docker cp <id_contenedor>:/ruta/fichero ./fichero",
-      "docker mv ./fichero_host.txt <id_contenedor>:/ruta/destino",
-      "docker cp ./fichero_host.txt <id_contenedor>:/ruta/destino",
-      "docker push ./fichero_host.txt <id_contenedor>:/ruta/destino"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "10. ¿Para qué sirve la opción '-e' en un comando 'docker run' o 'docker exec'?",
-    respuestas: [
-      "Para definir o inyectar variables de entorno dentro del contenedor.",
-      "Para especificar la imagen base de Alpine o Ubuntu.",
-      "Para exportar el contenedor a un fichero empaquetado .tar.",
-      "Para ejecutar el contenedor en modo depuración (debug)."
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "11. ¿Qué comando muestra las últimas 10 líneas de la salida estándar generada por un contenedor?",
-    respuestas: [
-      "docker inspect -n 10 <id_contenedor>",
-      "docker ps -n 10 <id_contenedor>",
-      "docker logs --tail 10 <id_contenedor> (o docker logs -n 10 <id_contenedor>)",
-      "docker top 10 <id_contenedor>"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "12. ¿Qué comando elimina de una sola vez todos los contenedores que están parados en el sistema?",
-    respuestas: [
-      "docker rmi $(docker images -q)",
-      "docker stop $(docker ps -q)",
-      "docker system reset --all",
-      "docker rm $(docker ps -a -q)"
+      "El criterio ambiental.",
+      "El criterio social.",
+      "Ninguno: los tres están igual de extendidos.",
+      "El criterio de gobernanza."
     ],
     correcta: 3
   },
   {
-    pregunta: "13. ¿Cuál es la diferencia entre 'docker rm' y 'docker rmi'?",
+    pregunta: "12. El tamaño de la empresa es el factor que más influye en la existencia o no de algunos stakeholders.",
     respuestas: [
-      "docker rm elimina imágenes y docker rmi elimina contenedores.",
-      "docker rm elimina contenedores y docker rmi elimina imágenes locales.",
-      "docker rm detiene contenedores y docker rmi reinicia el demonio de Docker.",
-      "Ambos comandos realizan exactamente la misma función sobre contenedores."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "14. ¿Qué comando limpia de golpe imágenes no usadas, contenedores parados y redes huérfanas?",
-    respuestas: [
-      "docker system prune -a",
-      "docker clean -a",
-      "docker purge --all",
-      "docker remove all"
+      "Verdadero",
+      "Falso"
     ],
     correcta: 0
   },
   {
-    pregunta: "15. ¿Cómo se crea una nueva imagen local a partir de los cambios realizados en un contenedor en ejecución?",
+    pregunta: "13. ¿Cuál de los siguientes es un indicador de sostenibilidad institucional?",
     respuestas: [
-      "docker save -m \"comentario\" <id> usuario/imagen:tag",
-      "docker build -m \"comentario\" <id> usuario/imagen:tag",
-      "docker commit -m \"comentario\" <id> usuario/imagen:tag",
-      "docker push -m \"comentario\" <id> usuario/imagen:tag"
+      "La gestión de la diversidad.",
+      "El fondo de maniobra.",
+      "La huella de carbono.",
+      "La cantidad de agua consumida."
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "14. El Acuerdo de París es un tratado internacional vinculante sobre el cambio climático, adoptado por 196 partes en 2015, que entró en vigor el 4 de noviembre de 2016.",
+    respuestas: [
+      "Verdadero",
+      "Falso"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "15. Los derechos humanos, las normas laborales, las políticas de igualdad y la diversidad e inclusión forman parte de los criterios...",
+    respuestas: [
+      "Financieros.",
+      "De gobernanza.",
+      "Sociales.",
+      "Ambientales."
     ],
     correcta: 2
   },
   {
-    pregunta: "16. ¿Qué diferencia hay entre los comandos 'docker save' y 'docker load'?",
+    pregunta: "16. Para que un producto sea considerado ISR debe indicar expresamente en su política de inversión que incluye criterios medioambientales, sociales y de buen gobierno.",
     respuestas: [
-      "save guarda una copia de un contenedor activo y load borra los volúmenes.",
-      "save exporta una imagen a un fichero .tar y load restaura la imagen desde un fichero .tar.",
-      "save sube la imagen a Docker Hub y load la descarga desde el registro.",
-      "save crea un Dockerfile y load lo ejecuta automáticamente."
+      "Verdadero",
+      "Falso"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "17. ¿Cuál de las siguientes acciones NO forma parte del Marco Estratégico de Energía y Clima de España?",
+    respuestas: [
+      "El Plan Nacional Integrado de Energía y Clima.",
+      "La Estrategia de Transición Justa.",
+      "La Ley de Economía Circular Global de la ONU.",
+      "El Anteproyecto de Ley de Cambio Climático y Transición Energética."
+    ],
+    correcta: 2
+  },
+  {
+    pregunta: "18. Además de la liquidez y el riesgo, ¿qué criterio tradicional de inversión complementa la ISR con criterios éticos, sociales y ambientales?",
+    respuestas: [
+      "La rentabilidad.",
+      "La gobernanza.",
+      "La reputación.",
+      "La exclusión."
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "19. Los criterios de gobernanza solo son aplicables a las grandes corporaciones de accionistas.",
+    respuestas: [
+      "Verdadero",
+      "Falso"
     ],
     correcta: 1
   },
   {
-    pregunta: "17. ¿En qué ruta por defecto coloca el servidor Apache los archivos web en una imagen 'httpd:2.4'?",
+    pregunta: "20. Combatir la pesca ilegal y excesiva es una de las metas del...",
     respuestas: [
-      "/var/www/html/",
-      "/usr/local/apache2/htdocs/",
-      "/var/www/localhost/htdocs/",
-      "/app/public/"
+      "ODS 2: Hambre cero.",
+      "ODS 14: Vida submarina.",
+      "ODS 15: Vida de ecosistemas terrestres.",
+      "ODS 13: Acción por el clima."
     ],
     correcta: 1
   },
   {
-    pregunta: "18. ¿En qué ruta por defecto coloca Apache sus archivos web en una imagen basada en 'ubuntu:latest'?",
+    pregunta: "21. ¿Qué producto de inversión socialmente responsable consiste en invertir en empresas cuyo fin es la solución a problemas sociales y medioambientales?",
     respuestas: [
-      "/usr/local/apache2/htdocs/",
-      "/var/www/localhost/htdocs/",
-      "/etc/apache2/www/",
-      "/var/www/html/"
+      "Bonos verdes y sociales.",
+      "Capital de riesgo social.",
+      "Préstamos verdes.",
+      "Fondos de inversión sostenibles."
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "22. ¿Cuál de estos NO figura entre los cinco indicadores de sostenibilidad más eficaces?",
+    respuestas: [
+      "La reducción de residuos y tasas de reciclaje.",
+      "El volumen de negocio.",
+      "Los kilómetros recorridos en los procesos logísticos.",
+      "El consumo de energía."
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "23. Garantizar el acceso a la vivienda y fomentar el uso del transporte público son metas vitales del...",
+    respuestas: [
+      "ODS 10: Reducción de las desigualdades.",
+      "ODS 11: Ciudades y comunidades sostenibles.",
+      "ODS 7: Energía asequible y no contaminante.",
+      "ODS 1: Fin de la pobreza."
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "24. El ODS 8 está muy relacionado con el ODS 4, ya que la educación de calidad es el motor para conseguir un trabajo de calidad y sostenible en el tiempo.",
+    respuestas: [
+      "Verdadero",
+      "Falso"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "25. La estrategia ISR según la cual no se consideran fondos ISR las empresas de sectores como el tabaco, el juego o el armamentístico se denomina...",
+    respuestas: [
+      "Exclusión.",
+      "Cumplimiento de tratados internacionales.",
+      "Objetivo social enfocado a la sostenibilidad.",
+      "Integración de factores ASG."
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "26. ¿Cuál es el instrumento más importante para la planificación y la ejecución de las actividades de desarrollo de la ONU a nivel nacional?",
+    respuestas: [
+      "El Plan Nacional Integrado de Energía y Clima.",
+      "El Acuerdo de París.",
+      "El Marco Estratégico de Energía y Clima.",
+      "El Marco de Cooperación de las Naciones Unidas para el Desarrollo Sostenible."
     ],
     correcta: 3
   },
   {
-    pregunta: "19. ¿En qué ruta por defecto se ubican los archivos web de Apache en una imagen 'alpine:latest'?",
+    pregunta: "27. Las inversiones socialmente responsables y los productos financieros solidarios son lo mismo.",
     respuestas: [
-      "/var/www/localhost/htdocs/",
-      "/var/www/html/",
-      "/usr/local/apache2/htdocs/",
-      "/home/alpine/www/"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "20. ¿Cuál es la instrucción adecuada en un Dockerfile para indicar el puerto de escucha del contenedor?",
-    respuestas: [
-      "PORT 80",
-      "EXPOSE 80",
-      "PUBLISH 80",
-      "MAP 80"
+      "Verdadero",
+      "Falso"
     ],
     correcta: 1
   },
   {
-    pregunta: "21. ¿Cuál es la diferencia principal entre las instrucciones 'RUN' y 'CMD' en un Dockerfile?",
+    pregunta: "28. Según la Comisión Mundial sobre el Medioambiente y el Desarrollo de la ONU, una empresa sostenible responde a las necesidades del presente sin comprometer la capacidad de las nuevas generaciones de responder a las suyas.",
     respuestas: [
-      "RUN se ejecuta al arrancar el contenedor y CMD durante la compilación de la imagen.",
-      "RUN instala únicamente Apache y CMD instala exclusivamente paquetes de Python.",
-      "RUN se ejecuta al compilar la imagen (build) y CMD define el comando por defecto al arrancar el contenedor.",
-      "Ambas instrucciones se ejecutan exactamente al mismo tiempo durante el arranque."
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "22. ¿Qué diferencia existe entre las instrucciones 'COPY' y 'ADD' en un Dockerfile?",
-    respuestas: [
-      "COPY solo copia ficheros/carpetas locales; ADD permite descargar URLs y descomprimir archivos tar automáticamente.",
-      "COPY permite descargar URLs remotas y ADD solo copia ficheros locales.",
-      "COPY es para imágenes de Ubuntu y ADD únicamente para imágenes de Alpine.",
-      "COPY borra los archivos tras copiarlos y ADD los mantiene en el contenedor."
+      "Verdadero",
+      "Falso"
     ],
     correcta: 0
-  },
-  {
-    pregunta: "23. ¿Cuál es el comando recomendado para arrancar Apache en primer plano en una imagen Ubuntu en el Dockerfile?",
-    respuestas: [
-      "CMD [\"service\", \"apache2\", \"start\"]",
-      "CMD [\"systemctl\", \"enable\", \"apache2\"]",
-      "CMD [\"/usr/sbin/httpd\", \"-k\", \"stop\"]",
-      "CMD [\"apachectl\", \"-D\", \"FOREGROUND\"]"
-    ],
-    correcta: 3
-  },
-  {
-    pregunta: "24. ¿Qué comando compila un Dockerfile ubicado en el directorio actual asignándole el nombre 'miapp:1.0'?",
-    respuestas: [
-      "docker compile -t miapp:1.0 .",
-      "docker build -t miapp:1.0 .",
-      "docker make -t miapp:1.0 .",
-      "docker run -b miapp:1.0 ."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "25. ¿Qué comando crea una red privada aislada de tipo bridge en Docker llamada 'mi_red'?",
-    respuestas: [
-      "docker network make mi_red",
-      "docker network add mi_red",
-      "docker network create mi_red",
-      "docker run --net-create mi_red"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "27. ¿Qué ocurre cuando se desconecta un contenedor de una red mediante 'docker network disconnect'?",
-    respuestas: [
-      "El contenedor se borra inmediatamente de la máquina anfitriona.",
-      "El contenedor pierde el acceso a la red especificada pero sigue ejecutándose.",
-      "La red se elimina automáticamente del demonio de Docker.",
-      "Se detienen todos los demás contenedores conectados a dicha red."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "30. ¿Qué comando crea un volumen nombrado administrado por Docker con el nombre 'datos_app'?",
-    respuestas: [
-      "docker volume new datos_app",
-      "docker make volume datos_app",
-      "docker run -v create datos_app",
-      "docker volume create datos_app"
-    ],
-    correcta: 3
-  },
-  {
-    pregunta: "31. ¿Cuál es la sintaxis correcta para asociar un volumen nombrado 'mivolumen' a la carpeta '/app' de un contenedor?",
-    respuestas: [
-      "docker run -d -v mivolumen:/app nginx",
-      "docker run -d -v /app:mivolumen nginx",
-      "docker run -d --mount mivolumen=/app nginx",
-      "docker run -d --volume-bind mivolumen /app nginx"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "34. ¿Qué ocurre con los datos almacenados en un Volumen Nombrado cuando se elimina el contenedor que lo usaba?",
-    respuestas: [
-      "Los datos del volumen se borran de forma permanente e irrecuperable.",
-      "El volumen se comprime automáticamente en un archivo con extensión .tar.",
-      "El volumen se convierte en un Bind Mount automáticamente.",
-      "Los datos se mantienen intactos en el anfitrión hasta que se borre el volumen explícitamente."
-    ],
-    correcta: 3
-  },
-  {
-    pregunta: "37. ¿Qué nombre de archivo por defecto busca el comando 'docker-compose up' para desplegar servicios?",
-    respuestas: [
-      "Dockerfile.compose",
-      "docker-services.json",
-      "docker-compose.yml",
-      "compose-config.yaml"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "38. ¿Qué comando inicia todos los servicios definidos en el fichero Compose ejecutándolos en segundo plano?",
-    respuestas: [
-      "docker-compose start -all",
-      "docker-compose up -d",
-      "docker-compose run --detach",
-      "docker-compose launch -b"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "39. ¿Qué comando detiene y destruye los contenedores, redes y volúmenes creados por Docker Compose?",
-    respuestas: [
-      "docker-compose stop --kill",
-      "docker-compose remove -a",
-      "docker-compose clean",
-      "docker-compose down"
-    ],
-    correcta: 3
-  },
-  {
-    pregunta: "40. ¿Qué comando permite escalar el servicio 'web' creando 3 instancias/réplicas en Docker Compose?",
-    respuestas: [
-      "docker-compose up -d --scale web=3",
-      "docker-compose scale web=3",
-      "docker-compose replicate web 3",
-      "docker-compose copy web --count 3"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "41. ¿Qué comando de Docker Compose muestra el estado y puertos de los contenedores del proyecto?",
-    respuestas: [
-      "docker-compose list",
-      "docker-compose status",
-      "docker-compose ps",
-      "docker-compose info"
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "42. ¿Qué comando reconstruye las imágenes personalizadas definidas en el archivo 'docker-compose.yml'?",
-    respuestas: [
-      "docker-compose compile",
-      "docker-compose build",
-      "docker-compose make",
-      "docker-compose refresh"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "43. ¿Para qué se utiliza la directiva 'depends_on' en un archivo 'docker-compose.yml'?",
-    respuestas: [
-      "Para indicar el orden de inicio de los servicios (ej. arrancar la BD antes que la web).",
-      "Para establecer los límites máximos de memoria RAM que usará cada contenedor.",
-      "Para enlazar carpetas del anfitrión mediante Bind Mounts obligatorios.",
-      "Para mapear los puertos expuestos directamente en el router."
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "44. ¿Cómo se sube una imagen compilada localmente al registro oficial de GitHub Container Registry (GHCR)?",
-    respuestas: [
-      "docker upload ghcr.io/usuario/repositorio/imagen:tag",
-      "docker push ghcr.io/usuario/repositorio/imagen:tag",
-      "git push ghcr.io/usuario/repositorio/imagen:tag",
-      "docker send ghcr.io/usuario/repositorio/imagen:tag"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "46. ¿Qué ocurre si ejecutas 'docker run' especificando una imagen que no existe en tu equipo local?",
-    respuestas: [
-      "El comando falla de inmediato con un error de archivo no encontrado.",
-      "Docker crea un Dockerfile vacío y te pide escribir las instrucciones.",
-      "Docker la busca automáticamente en el registro (Docker Hub) y la descarga antes de ejecutarla.",
-      "El sistema operativo anfitrión se reinicia para actualizar los repositorios."
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "47. ¿Qué parámetro del comando 'docker run' elimina el contenedor automáticamente al finalizar su ejecución?",
-    respuestas: [
-      "--rm",
-      "--delete",
-      "--autoclean",
-      "--temp"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "49. ¿Qué tres pilares componen la arquitectura Cliente-Servidor de Docker?",
-    respuestas: [
-      "Cliente, Servidor y Registro.",
-      "Hipervisor, Kernel y Sistema Operativo Invitado (Guest OS).",
-      "Namespaces, Cgroups y Chroot.",
-      "Docker Compose, Docker Swarm y Docker Desktop."
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "50. ¿Cómo se soluciona el conflicto cuando el puerto 8080 del host ya está ocupado al lanzar un contenedor?",
-    respuestas: [
-      "Cambiando la instrucción 'EXPOSE 80' dentro del binario compilado del Kernel.",
-      "Cambiando el mapeo en el comando a otro puerto del host libre, por ejemplo: '-p 9090:80'.",
-      "Borrando el ejecutable /bin/bash de la máquina anfitriona.",
-      "No se puede solucionar, es obligatorio usar siempre el puerto 8080 en el anfitrión."
-    ],
-    correcta: 1
   }
 ];
+    
 
 
 // Función para barajar un array
