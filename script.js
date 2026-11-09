@@ -486,19 +486,31 @@ function siguientePregunta() {
 
 // Inicializar la primera pregunta al cargar la página
 window.onload = function() {
-  const temaOscuroGuardado = localStorage.getItem('modo-oscuro') === 'true';
+  let temaOscuroGuardado = false;
   const botonTema = document.getElementById('theme-toggle');
+
+  try {
+    temaOscuroGuardado = localStorage.getItem('modo-oscuro') === 'true';
+  } catch (error) {
+    // El tema sigue siendo alternable aunque el navegador bloquee el almacenamiento.
+  }
 
   document.body.classList.toggle('modo-oscuro', temaOscuroGuardado);
   actualizarBotonTema(botonTema, temaOscuroGuardado);
-    mostrarPregunta();
+  botonTema.addEventListener('click', alternarModoOscuro);
+  mostrarPregunta();
 };
 
 function alternarModoOscuro() {
   const modoOscuroActivo = document.body.classList.toggle('modo-oscuro');
   const botonTema = document.getElementById('theme-toggle');
 
-  localStorage.setItem('modo-oscuro', modoOscuroActivo);
+  try {
+    localStorage.setItem('modo-oscuro', modoOscuroActivo);
+  } catch (error) {
+    // El cambio visual no depende de que se pueda guardar la preferencia.
+  }
+
   actualizarBotonTema(botonTema, modoOscuroActivo);
 }
 
