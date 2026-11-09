@@ -1,270 +1,387 @@
 const preguntas = [
   {
-    pregunta: "1. ¿Cuál es el principal interés de los inversores como stakeholders?",
+    pregunta: "1. ¿Cuál fue la materia prima empleada para que funcionara la máquina de vapor en la primera revolución industrial?",
     respuestas: [
-      "Conocer el impacto medioambiental en la zona donde viven.",
-      "Recaudar impuestos de la empresa.",
-      "Conseguir el máximo rendimiento de sus acciones.",
-      "Mejorar las condiciones laborales de la plantilla."
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "2. ¿Qué stakeholders son las personas que, sin ser necesariamente clientes, viven en la zona donde se ubica la empresa?",
-    respuestas: [
-      "Los acreedores.",
-      "Los proveedores.",
-      "Las comunidades locales.",
-      "Las instituciones políticas."
-    ],
-    correcta: 2
-  },
-  {
-    pregunta: "3. Dentro de las 5P, la P de Prosperidad se relaciona principalmente con...",
-    respuestas: [
-      "Políticas económicas basadas en las finanzas sostenibles y el reparto justo de la riqueza.",
-      "Una sociedad alejada de la conflictividad y las injerencias.",
-      "La conservación de la biodiversidad en la tierra y en los océanos.",
-      "Las alianzas entre pueblos, gobiernos y empresas."
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "4. ¿Qué tres dimensiones debe equilibrar el desarrollo sostenible según la definición de la unidad?",
-    respuestas: [
-      "La competitividad, la innovación y la digitalización.",
-      "El crecimiento de la economía, el respeto del medioambiente y el bienestar social.",
-      "El beneficio empresarial, la reducción de impuestos y el empleo.",
-      "La seguridad jurídica, la transparencia y la gobernanza."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "5. ¿Qué tipo de sostenibilidad se centra en la preservación de la biodiversidad sin renunciar al progreso económico y social?",
-    respuestas: [
-      "Sostenibilidad ambiental.",
-      "Sostenibilidad social.",
-      "Sostenibilidad económica.",
-      "Sostenibilidad institucional."
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "6. La empresa Cemex, que favorece la autoconstrucción para que las comunidades obtengan una vivienda digna, es un ejemplo de sostenibilidad...",
-    respuestas: [
-      "Económica.",
-      "Ambiental.",
-      "Institucional.",
-      "Social."
+      "El petróleo",
+      "La electricidad",
+      "El gas natural",
+      "El carbón"
     ],
     correcta: 3
   },
   {
-    pregunta: "7. La Agenda 2030 fue aprobada por la ONU en septiembre de 2020.",
+    pregunta: "2. ¿En qué país se produjo la primera revolución industrial a partir del siglo XVIII?",
     respuestas: [
-      "Verdadero",
-      "Falso"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "8. ¿Cuál de estos es uno de los elementos clave del Acuerdo de París?",
-    respuestas: [
-      "Limitar el aumento de las temperaturas a 1,5 °C.",
-      "Eliminar por completo el uso de combustibles fósiles antes de 2025.",
-      "Revisar la contribución de los países a la reducción de emisiones cada diez años.",
-      "Prohibir la financiación climática a los países en desarrollo."
+      "Inglaterra",
+      "Alemania",
+      "Francia",
+      "Estados Unidos"
     ],
     correcta: 0
   },
   {
-    pregunta: "9. ¿Cuántas metas plantea la Agenda 2030 en total?",
+    pregunta: "3. ¿Qué país se convirtió en el primer país de Europa (tras Gran Bretaña) en transformarse económicamente, centrándose en el hierro, el carbón y los textiles?",
     respuestas: [
-      "17.",
-      "169.",
-      "196.",
-      "100."
+      "Bélgica",
+      "España",
+      "Francia",
+      "Italia"
+    ],
+    correcta: 0
+  },
+  {
+    pregunta: "4. ¿En qué año se sitúa el inicio de la segunda revolución industrial?",
+    respuestas: [
+      "2011",
+      "1870",
+      "1969",
+      "1784"
     ],
     correcta: 1
   },
   {
-    pregunta: "10. ¿Cuál de los siguientes es un indicador de sostenibilidad social?",
+    pregunta: "5. ¿Qué fuentes de energía introdujo la segunda revolución industrial para la producción masiva?",
     respuestas: [
-      "La materia prima utilizada.",
-      "El ciclo de vida del producto.",
-      "El volumen de negocio.",
-      "La conciliación laboral y familiar."
+      "El carbón y la energía hidráulica",
+      "La electricidad y el petróleo",
+      "La energía solar y la eólica",
+      "La energía nuclear y el gas"
+    ],
+    correcta: 1
+  },
+  {
+    pregunta: "6. El Ford T, de Henry Ford, es un ejemplo de la producción en cadena propia de la...",
+    respuestas: [
+      "cuarta revolución industrial",
+      "tercera revolución industrial",
+      "primera revolución industrial",
+      "segunda revolución industrial"
     ],
     correcta: 3
   },
   {
-    pregunta: "11. Según la unidad, ¿cuál es posiblemente el criterio ASG menos extendido, aunque el Pacto Mundial de la ONU insta a las empresas a aplicarlo?",
+    pregunta: "7. En Alemania se lanzó el primer vehículo propulsado por petróleo, creado por el grupo...",
     respuestas: [
-      "El criterio ambiental.",
-      "El criterio social.",
-      "Ninguno: los tres están igual de extendidos.",
-      "El criterio de gobernanza."
-    ],
-    correcta: 3
-  },
-  {
-    pregunta: "12. El tamaño de la empresa es el factor que más influye en la existencia o no de algunos stakeholders.",
-    respuestas: [
-      "Verdadero",
-      "Falso"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "13. ¿Cuál de los siguientes es un indicador de sostenibilidad institucional?",
-    respuestas: [
-      "La gestión de la diversidad.",
-      "El fondo de maniobra.",
-      "La huella de carbono.",
-      "La cantidad de agua consumida."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "14. El Acuerdo de París es un tratado internacional vinculante sobre el cambio climático, adoptado por 196 partes en 2015, que entró en vigor el 4 de noviembre de 2016.",
-    respuestas: [
-      "Verdadero",
-      "Falso"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "15. Los derechos humanos, las normas laborales, las políticas de igualdad y la diversidad e inclusión forman parte de los criterios...",
-    respuestas: [
-      "Financieros.",
-      "De gobernanza.",
-      "Sociales.",
-      "Ambientales."
+      "Bayer",
+      "Ford",
+      "Daimler",
+      "Siemens"
     ],
     correcta: 2
   },
   {
-    pregunta: "16. Para que un producto sea considerado ISR debe indicar expresamente en su política de inversión que incluye criterios medioambientales, sociales y de buen gobierno.",
+    pregunta: "8. ¿Qué material, inventado a inicios del siglo XX, se considera el primer polímero completamente sintético?",
     respuestas: [
-      "Verdadero",
-      "Falso"
+      "La baquelita",
+      "El aluminio",
+      "El caucho vulcanizado",
+      "El acero inoxidable"
     ],
     correcta: 0
   },
   {
-    pregunta: "17. ¿Cuál de las siguientes acciones NO forma parte del Marco Estratégico de Energía y Clima de España?",
+    pregunta: "9. En la segunda revolución industrial, ¿qué material se empleaba para cubrir otros metales como el hierro y el acero protegiéndolos de la corrosión?",
     respuestas: [
-      "El Plan Nacional Integrado de Energía y Clima.",
-      "La Estrategia de Transición Justa.",
-      "La Ley de Economía Circular Global de la ONU.",
-      "El Anteproyecto de Ley de Cambio Climático y Transición Energética."
+      "El níquel",
+      "El cobre",
+      "El zinc",
+      "El aluminio"
     ],
     correcta: 2
   },
   {
-    pregunta: "18. Además de la liquidez y el riesgo, ¿qué criterio tradicional de inversión complementa la ISR con criterios éticos, sociales y ambientales?",
+    pregunta: "10. ¿Quién creó el proceso de conservación alimentaria conocido como pasteurización?",
     respuestas: [
-      "La rentabilidad.",
-      "La gobernanza.",
-      "La reputación.",
-      "La exclusión."
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "19. Los criterios de gobernanza solo son aplicables a las grandes corporaciones de accionistas.",
-    respuestas: [
-      "Verdadero",
-      "Falso"
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "20. Combatir la pesca ilegal y excesiva es una de las metas del...",
-    respuestas: [
-      "ODS 2: Hambre cero.",
-      "ODS 14: Vida submarina.",
-      "ODS 15: Vida de ecosistemas terrestres.",
-      "ODS 13: Acción por el clima."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "21. ¿Qué producto de inversión socialmente responsable consiste en invertir en empresas cuyo fin es la solución a problemas sociales y medioambientales?",
-    respuestas: [
-      "Bonos verdes y sociales.",
-      "Capital de riesgo social.",
-      "Préstamos verdes.",
-      "Fondos de inversión sostenibles."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "22. ¿Cuál de estos NO figura entre los cinco indicadores de sostenibilidad más eficaces?",
-    respuestas: [
-      "La reducción de residuos y tasas de reciclaje.",
-      "El volumen de negocio.",
-      "Los kilómetros recorridos en los procesos logísticos.",
-      "El consumo de energía."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "23. Garantizar el acceso a la vivienda y fomentar el uso del transporte público son metas vitales del...",
-    respuestas: [
-      "ODS 10: Reducción de las desigualdades.",
-      "ODS 11: Ciudades y comunidades sostenibles.",
-      "ODS 7: Energía asequible y no contaminante.",
-      "ODS 1: Fin de la pobreza."
-    ],
-    correcta: 1
-  },
-  {
-    pregunta: "24. El ODS 8 está muy relacionado con el ODS 4, ya que la educación de calidad es el motor para conseguir un trabajo de calidad y sostenible en el tiempo.",
-    respuestas: [
-      "Verdadero",
-      "Falso"
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "25. La estrategia ISR según la cual no se consideran fondos ISR las empresas de sectores como el tabaco, el juego o el armamentístico se denomina...",
-    respuestas: [
-      "Exclusión.",
-      "Cumplimiento de tratados internacionales.",
-      "Objetivo social enfocado a la sostenibilidad.",
-      "Integración de factores ASG."
-    ],
-    correcta: 0
-  },
-  {
-    pregunta: "26. ¿Cuál es el instrumento más importante para la planificación y la ejecución de las actividades de desarrollo de la ONU a nivel nacional?",
-    respuestas: [
-      "El Plan Nacional Integrado de Energía y Clima.",
-      "El Acuerdo de París.",
-      "El Marco Estratégico de Energía y Clima.",
-      "El Marco de Cooperación de las Naciones Unidas para el Desarrollo Sostenible."
+      "Felix Hoffmann",
+      "Thomas Alva Edison",
+      "James Watt",
+      "Louis Pasteur"
     ],
     correcta: 3
   },
   {
-    pregunta: "27. Las inversiones socialmente responsables y los productos financieros solidarios son lo mismo.",
-    respuestas: [
-      "Verdadero",
-      "Falso"
-    ],
-    correcta: 1
-  },
+  pregunta: "11. La tercera revolución industrial se produce en la década de...",
+  respuestas: [
+    "1970",
+    "1870",
+    "2010",
+    "1990"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "12. ¿Cómo suele denominarse la época iniciada con la tercera revolución industrial?",
+  respuestas: [
+    "Era de la conectividad",
+    "Era de la electrificación",
+    "Era del vapor",
+    "Era de la información"
+  ],
+  correcta: 3
+},
+{
+  pregunta: "13. ¿Quién acuñó el término «ingeniería del software» y diseñó el software del módulo de mando y del módulo lunar del Programa Apolo?",
+  respuestas: [
+    "Ada Lovelace",
+    "Margaret Hamilton",
+    "Grace Hopper",
+    "Hedy Lamarr"
+  ],
+  correcta: 1
+},
+{
+  pregunta: "14. ¿Aproximadamente a partir de qué año tiene lugar la cuarta revolución industrial (industria 4.0 o 4IR)?",
+  respuestas: [
+    "2000",
+    "1969",
+    "2020",
+    "2011"
+  ],
+  correcta: 3
+},
+{
+  pregunta: "15. ¿Qué significan las siglas CPS en el contexto de la industria 4.0?",
+  respuestas: [
+    "Cloud Processing Services",
+    "Computer Production Systems",
+    "Control Process Software",
+    "Cyber Physical Systems (sistemas ciberfísicos)"
+  ],
+  correcta: 3
+},
+{
+  pregunta: "16. ¿Cuál de los siguientes NO es uno de los cuatro tipos fundamentales de tecnologías disruptivas de la industria 4.0 según el texto?",
+  respuestas: [
+    "Análisis e inteligencia",
+    "Ingeniería avanzada (fabricación aditiva, energía renovable, nanopartículas)",
+    "Máquina de vapor y mecanización",
+    "Conectividad, datos y potencia computacional"
+  ],
+  correcta: 2
+},
+{
+  pregunta: "17. Las tecnologías 4IR promueven un crecimiento responsable a largo plazo a través de acciones en tres grandes áreas. ¿Cuáles son?",
+  respuestas: [
+    "Industrial, comercial y financiera",
+    "Tecnológica, laboral y educativa",
+    "Económica, política y cultural",
+    "Medioambiental, social y gobernanza"
+  ],
+  correcta: 3
+},
+{
+  pregunta: "18. Según el texto, durante la próxima década la demanda de habilidades tecnológicas, como la codificación, aumentará en más del...",
+  respuestas: [
+    "50 %",
+    "30 %",
+    "10 %",
+    "33 %"
+  ],
+  correcta: 0
+},
+{
+ pregunta: "19. La quinta revolución industrial (industria 5.0) está centrada en...",
+  respuestas: [
+    "la sustitución completa de los trabajadores por robots",
+    "la vuelta a la producción artesanal",
+    "el uso exclusivo de combustibles fósiles",
+    "el ser humano, el cuidado del medioambiente y los beneficios sociales"
+  ],
+  correcta: 3
+},
+{
+  pregunta: "20. La digitalización es el proceso de...",
+  respuestas: [
+    "imprimir todos los documentos de la empresa",
+    "sustituir a los empleados por máquinas",
+    "cambiar los estados de los elementos de analógicos a digitales",
+    "trasladar la producción a otros países"
+  ],
+  correcta: 2
+},
   {
-    pregunta: "28. Según la Comisión Mundial sobre el Medioambiente y el Desarrollo de la ONU, una empresa sostenible responde a las necesidades del presente sin comprometer la capacidad de las nuevas generaciones de responder a las suyas.",
-    respuestas: [
-      "Verdadero",
-      "Falso"
-    ],
-    correcta: 0
-  }
+  pregunta: "21. En el proceso de digitalización, ¿qué función tienen los perfiles de usuario asignados a las cuentas de los empleados?",
+  respuestas: [
+    "Restringir y permitir accesos a las cuentas",
+    "Calcular las nóminas de los empleados",
+    "Sustituir el uso de contraseñas",
+    "Fabricar las piezas de forma automática"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "22. ¿Qué tecnología se considera un pilar fundamental de la transformación digital en la cuarta revolución industrial, al romper las barreras geográficas?",
+  respuestas: [
+    "El fax",
+    "La máquina de vapor",
+    "El telégrafo",
+    "La computación en la nube"
+  ],
+  correcta: 3
+},
+{
+  pregunta: "23. En la industria 4.0, los robots programados para desactivar su tarea si golpean o chocan con un empleado reciben el nombre de...",
+  respuestas: [
+    "robots sociales",
+    "robots autónomos",
+    "robots colaborativos",
+    "robots industriales aislados"
+  ],
+  correcta: 2
+},
+{
+  pregunta: "24. ¿Qué significan las siglas AGV, ejemplo de sistema ciberfísico?",
+  respuestas: [
+    "Automated Guided Vehicle",
+    "Advanced Graphic Visualization",
+    "Automatic Gateway Verification",
+    "Artificial General Vision"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "25. ¿Cómo se denomina el cargo de mayor responsabilidad de una organización, situado en el nivel superior del organigrama?",
+  respuestas: [
+    "HR (Human Resources)",
+    "CFO (Chief Financial Officer)",
+    "CTO (Chief Technology Officer)",
+    "CEO (Chief Executive Officer)"
+  ],
+  correcta: 3
+},
+{
+  pregunta: "26. ¿Cuál de los siguientes NO es un ejemplo de doble verificación de usuario citado en el texto?",
+  respuestas: [
+    "Envío de un SMS al móvil",
+    "Introducción de un PIN",
+    "Introducción de un dato biométrico (huella, pupila)",
+    "Enviar una carta certificada"
+  ],
+  correcta: 3
+},
+{
+  pregunta: "27. La tecnología operativa (OT) alude a...",
+  respuestas: [
+    "el hardware y el software que controlan los procesos físicos",
+    "la gestión de sistemas informáticos, redes y software de oficina",
+    "la contabilidad de la empresa",
+    "el diseño de interfaces de usuario web"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "28. En cuanto a los aspectos temporales, ¿qué valora principalmente la OT frente a la IT?",
+  respuestas: [
+    "La recuperación de datos históricos",
+    "El almacenamiento de grandes cantidades de datos",
+    "La capacidad de respuesta en tiempo real",
+    "El envío de correo electrónico"
+  ],
+  correcta: 2
+},
+{
+  pregunta: "29. ¿Cuál de las siguientes profesiones está asociada al entorno IT y no al OT?",
+  respuestas: [
+    "Administrador/a de bases de datos",
+    "Programador/a de robots industriales",
+    "Ingeniero/a industrial electrónico",
+    "Operario/a de fábrica"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "30. ¿Qué significan las siglas SCADA?",
+  respuestas: [
+    "System Control and Digital Automation",
+    "Supervisory Control and Data Acquisition",
+    "Smart Computing and Device Administration",
+    "Secure Cloud Access and Data Analysis"
+  ],
+  correcta: 1
+},
+  {
+  pregunta: "31. Respecto a las diferencias entre edge computing y cloud computing, ¿cuál de las siguientes afirmaciones es correcta?",
+  respuestas: [
+    "La edge computing procesa los datos en el borde de la red, cerca del dispositivo, y requiere poco ancho de banda",
+    "La cloud computing es la más adecuada para aplicaciones que requieren baja latencia, como los dispositivos IoT",
+    "La edge computing es más barata y más fácil de escalar que la cloud computing",
+    "La cloud computing procesa los datos cerca de la fuente y no los transmite por la red"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "32. El sistema fabril (factory system) apareció en Inglaterra durante la Revolución Industrial en rechazo al tradicional sistema doméstico de producción artesanal.",
+  respuestas: [
+    "Verdadero",
+    "Falso"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "33. La primera revolución industrial supuso el paso de un modelo económico basado en la agricultura a uno basado en la industria y también se conoce como industria 1.0.",
+  respuestas: [
+    "Verdadero",
+    "Falso"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "34. En 1897 el químico Felix Hoffmann sintetizó el ácido acetilsalicílico, posteriormente llamado aspirina.",
+  respuestas: [
+    "Verdadero",
+    "Falso"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "35. Thomas Alva Edison inventó el fonógrafo, el primer aparato que reproducía y grababa sonidos, además de la lámpara incandescente.",
+  respuestas: [
+    "Verdadero",
+    "Falso"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "36. Según el texto, la brecha salarial se originó durante la tercera revolución industrial.",
+  respuestas: [
+    "Verdadero",
+    "Falso"
+  ],
+  correcta: 1
+},
+{
+  pregunta: "37. La COVID-19 aceleró la transición hacia la 4IR al obligar a las empresas a adoptar la digitalización y las operaciones sin contacto.",
+  respuestas: [
+    "Verdadero",
+    "Falso"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "38. Las habilidades blandas son las que se aprenden en el trabajo, en los estudios y a través de la lectura.",
+  respuestas: [
+    "Verdadero",
+    "Falso"
+  ],
+  correcta: 1
+},
+{
+  pregunta: "39. El ciberpunk es un género literario de ciencia ficción relacionado con William Gibson, autor de la trilogía del Ensanche.",
+  respuestas: [
+    "Verdadero",
+    "Falso"
+  ],
+  correcta: 0
+},
+{
+  pregunta: "40. En el diagrama en forma de árbol que representa la estructura de la empresa, las ramas son los departamentos y las hojas son los empleados.",
+  respuestas: [
+    "Verdadero",
+    "Falso"
+  ],
+  correcta: 0
+}
 ];
-    
 
 
 // Función para barajar un array
