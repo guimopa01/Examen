@@ -486,8 +486,26 @@ function siguientePregunta() {
 
 // Inicializar la primera pregunta al cargar la página
 window.onload = function() {
+  const temaOscuroGuardado = localStorage.getItem('modo-oscuro') === 'true';
+  const botonTema = document.getElementById('theme-toggle');
+
+  document.body.classList.toggle('modo-oscuro', temaOscuroGuardado);
+  actualizarBotonTema(botonTema, temaOscuroGuardado);
     mostrarPregunta();
 };
+
+function alternarModoOscuro() {
+  const modoOscuroActivo = document.body.classList.toggle('modo-oscuro');
+  const botonTema = document.getElementById('theme-toggle');
+
+  localStorage.setItem('modo-oscuro', modoOscuroActivo);
+  actualizarBotonTema(botonTema, modoOscuroActivo);
+}
+
+function actualizarBotonTema(boton, modoOscuroActivo) {
+  boton.textContent = modoOscuroActivo ? 'Modo claro' : 'Modo oscuro';
+  boton.setAttribute('aria-pressed', modoOscuroActivo);
+}
 
 
 
