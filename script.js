@@ -515,7 +515,7 @@ function alternarModoOscuro() {
 }
 
 function actualizarBotonTema(boton, modoOscuroActivo) {
-  boton.textContent = modoOscuroActivo ? 'Modo claro' : 'Modo oscuro';
+  boton.textContent = modoOscuroActivo ? 'Modo Xavi ON' : 'Modo Xavi OFF';
   boton.setAttribute('aria-pressed', modoOscuroActivo);
 }
 
