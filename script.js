@@ -407,6 +407,43 @@ preguntas.forEach(pregunta => {
 let indicePregunta = 0;
 let preguntaActual = 1;
 let respuestasCorrectas = 0;
+let inicioCronometro;
+let intervaloCronometro;
+let tiempoFinal;
+
+function formatearTiempo(milisegundos) {
+    const segundosTotales = Math.floor(milisegundos / 1000);
+    const horas = Math.floor(segundosTotales / 3600);
+    const minutos = Math.floor((segundosTotales % 3600) / 60);
+    const segundos = segundosTotales % 60;
+    const tiempo = [minutos, segundos]
+        .map(valor => String(valor).padStart(2, '0'))
+        .join(':');
+
+    return horas > 0 ? `${String(horas).padStart(2, '0')}:${tiempo}` : tiempo;
+}
+
+function actualizarCronometro() {
+    const tiempoTranscurrido = tiempoFinal ?? performance.now() - inicioCronometro;
+    document.getElementById('cronometro').textContent =
+        `Tiempo: ${formatearTiempo(tiempoTranscurrido)}`;
+}
+
+function iniciarCronometro() {
+    clearInterval(intervaloCronometro);
+    inicioCronometro = performance.now();
+    tiempoFinal = null;
+    actualizarCronometro();
+    intervaloCronometro = setInterval(actualizarCronometro, 1000);
+}
+
+function detenerCronometro() {
+    if (tiempoFinal === undefined || tiempoFinal === null) {
+        tiempoFinal = performance.now() - inicioCronometro;
+        clearInterval(intervaloCronometro);
+        actualizarCronometro();
+    }
+}
 
 // Función para mostrar la pregunta y las respuestas
 function mostrarPregunta() {
@@ -457,6 +494,10 @@ function seleccionarRespuesta(respuestaUsuario) {
     }
 
     respuestaBox.style.display = 'block';
+
+    if (indicePregunta === preguntas.length - 1) {
+        detenerCronometro();
+    }
 }
 
 // Función para avanzar a la siguiente pregunta
@@ -467,7 +508,8 @@ function siguientePregunta() {
     if (indicePregunta < preguntas.length) {
         mostrarPregunta();
     } else {
-        alert(`Has completado todas las preguntas.\nRespuestas correctas: ${respuestasCorrectas} / ${preguntas.length}`);
+        detenerCronometro();
+        alert(`Has completado todas las preguntas.\nRespuestas correctas: ${respuestasCorrectas} / ${preguntas.length}\nTiempo: ${formatearTiempo(tiempoFinal)}`);
         // Reiniciar el cuestionario
         indicePregunta = 0;
         preguntaActual = 1;
@@ -480,6 +522,7 @@ function siguientePregunta() {
             pregunta.correcta = respuestas.indexOf(pregunta.respuestas[correcta]);
             pregunta.respuestas = respuestas;
         });
+        iniciarCronometro();
         mostrarPregunta();
     }
 }
@@ -498,6 +541,7 @@ window.onload = function() {
   document.body.classList.toggle('modo-oscuro', temaOscuroGuardado);
   actualizarBotonTema(botonTema, temaOscuroGuardado);
   botonTema.addEventListener('click', alternarModoOscuro);
+  iniciarCronometro();
   mostrarPregunta();
 };
 
@@ -518,7 +562,6 @@ function actualizarBotonTema(boton, modoOscuroActivo) {
   boton.textContent = modoOscuroActivo ? 'Modo Xavi ON' : 'Modo Xavi OFF';
   boton.setAttribute('aria-pressed', modoOscuroActivo);
 }
-
 
 
 

@@ -31,6 +31,12 @@ h1 {
     margin-bottom: 20px;
 }
 
+#cronometro {
+    margin: 0 0 20px;
+    font-size: 1.2em;
+    font-variant-numeric: tabular-nums;
+}
+
 #pregunta-container {
     display: flex;
     flex-direction: column;
